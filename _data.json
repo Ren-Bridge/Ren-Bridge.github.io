@@ -1,0 +1,107 @@
+{
+ "keyword": "ren bridge",
+ "h1": "Ren Bridge",
+ "brand": "RenBridge",
+ "niche": "bridge",
+ "verb": "Bridge",
+ "title": "Ren Bridge - Open App",
+ "meta_description": "ren bridge opens the official RenBridge app to review supported cross-chain mint and burn routes before connecting a wallet.",
+ "palette": {
+  "mode": "dark",
+  "bg": "#001F3F",
+  "accent": "#FFFFFF",
+  "ink": "#F7FAFF"
+ },
+ "hero_h2": "Review RenVM routes for native cross-chain movement",
+ "hero_lead": "ren bridge is the official RenBridge route for opening the legacy RenVM interface, reviewing supported assets, and connecting only after you verify the domain.",
+ "badge": "RenVM",
+ "widget": {
+  "from": "BTC",
+  "from_net": "Bitcoin",
+  "to": "renBTC",
+  "to_net": "Ethereum",
+  "action": "Open RenBridge App"
+ },
+ "trust": [
+  "Official app domain",
+  "Open-source bridge UI",
+  "RenVM documentation"
+ ],
+ "what_is": "RenBridge is the Ren project’s bridge UI for RenVM, a system historically used to mint and burn representations such as renBTC across chains. The <a href='https://docs.renproject.io/'>Ren Resource Center</a> documents RenVM, RenJS, Darknodes, and developer resources.",
+ "how": [
+  {
+   "t": "Open the app",
+   "d": "Use the official domain and confirm the URL before connecting any wallet."
+  },
+  {
+   "t": "Choose a route",
+   "d": "Select the asset, source network, and destination network shown as available in the interface."
+  },
+  {
+   "t": "Review details",
+   "d": "Check destination address, wallet network, confirmations, gas, and any route-specific notices."
+  },
+  {
+   "t": "Sign and monitor",
+   "d": "Approve only the expected transaction, then track source and destination confirmations."
+  }
+ ],
+ "points": [
+  {
+   "h": "Official route first",
+   "p": "The public <a href='https://github.com/renproject/bridge-v2'>bridge-v2 repository</a> identifies bridge.renproject.io as the RenBridge app domain."
+  },
+  {
+   "h": "Built around RenVM",
+   "p": "RenVM was designed for cross-chain asset movement, including mint and burn flows for wrapped representations such as renBTC."
+  },
+  {
+   "h": "Verify current support",
+   "p": "Routes, assets, and availability can change, so rely on the live app state and official project resources instead of old screenshots or third-party mirrors."
+  }
+ ],
+ "eeat": [
+  {
+   "text": "Ren Resource Center",
+   "url": "https://docs.renproject.io/"
+  },
+  {
+   "text": "Ren Bridge source repository",
+   "url": "https://github.com/renproject/bridge-v2"
+  },
+  {
+   "text": "Ethereum bridge overview",
+   "url": "https://ethereum.org/bridges/"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is ren bridge?",
+   "a": "ren bridge is commonly used to refer to RenBridge, the Ren project’s app interface for RenVM cross-chain asset flows.",
+   "open": true
+  },
+  {
+   "q": "Is ren bridge the official app?",
+   "a": "The official app domain referenced by the RenBridge source repository is bridge.renproject.io; verify the domain before connecting.",
+   "open": false
+  },
+  {
+   "q": "What can I move with ren bridge?",
+   "a": "Historically, RenVM supported mint and burn routes for assets such as BTC into representations like renBTC, but current availability should be checked in the app.",
+   "open": false
+  },
+  {
+   "q": "Does ren bridge show fees before signing?",
+   "a": "Use the app review screen to inspect route details, network gas, and transaction prompts before approving anything; this page does not quote live fees.",
+   "open": false
+  },
+  {
+   "q": "What if ren bridge does not load?",
+   "a": "Do not use look-alike domains. Check <a href='https://docs.renproject.io/'>official Ren documentation</a> and the source repository for current project references.",
+   "open": false
+  }
+ ],
+ "official_url": "https://bridge.renproject.io/",
+ "official_domain": "bridge.renproject.io",
+ "footer_note": "This page is not the official app; verify bridge.renproject.io before connecting; educational content, not financial advice."
+}
