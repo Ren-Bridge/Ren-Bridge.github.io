@@ -1,0 +1,84 @@
+{
+  "key_facts": {
+    "Category": "Legacy cross-chain bridge protocol",
+    "Network": "Historically Bitcoin, Ethereum, and other chains",
+    "Token": "REN",
+    "Custody": "Legacy RenVM darknode custody model"
+  },
+  "intent": [
+    {
+      "q": "Is RenBridge still active?",
+      "a": "RenBridge should be treated as a legacy bridge, not a normal active bridge for new transfers. Ren 1.0 became unsafe to rely on after the Alameda/FTX collapse and the project warned users around the transition away from the original network. Many current searches for RenBridge are recovery, status, or renBTC questions rather than new bridging intent. Users should not send new funds to old RenBridge flows unless an official Ren channel clearly confirms the route is active. For Bitcoin-to-DeFi exposure, current alternatives such as WBTC, tBTC, or native BTC L2 routes should be compared."
+    },
+    {
+      "q": "What happened to RenBridge and renBTC?",
+      "a": "RenBridge was the app interface for RenVM, which minted assets such as renBTC on chains like Ethereum after custodying native assets such as BTC. The model depended on Ren's darknode network and project operations. After FTX and Alameda-related issues, Ren 1.0 entered a sunset phase and users were urged to burn or move legacy assets rather than assume indefinite bridge support. That is why renBTC searches often center on redemption, liquidity, delistings, and whether a specific token is still redeemable or only tradable in secondary markets."
+    },
+    {
+      "q": "Can I redeem renBTC from RenBridge?",
+      "a": "Redemption depends on the current status of official Ren infrastructure and the specific asset. Users should not assume renBTC can be redeemed through old guides, because legacy bridge availability and liquidity changed materially after the Ren 1.0 sunset. The practical first step is to check official Ren domains, GitHub, and announcements for current redemption tooling. If official redemption is unavailable, a holder may only have secondary market options, which can involve discounts, low liquidity, or smart-contract and counterparty risk."
+    },
+    {
+      "q": "RenBridge fees and legacy bridge costs",
+      "a": "When RenBridge was active, users considered mint, burn, Bitcoin miner fees, Ethereum gas, and RenVM fees. Today, the more important cost question is legacy liquidity and redemption risk. A renBTC holder may face slippage, thin markets, or no supported redemption route, which can matter more than ordinary bridge fees. Users comparing old RenBridge content should separate historical fee explanations from current ability to move assets. Any action should start with official status confirmation rather than a third-party tutorial."
+    },
+    {
+      "q": "RenBridge vs tBTC or WBTC",
+      "a": "RenBridge, tBTC, and WBTC all addressed Bitcoin use in DeFi, but with very different trust models. RenBridge used RenVM and darknodes to mint assets like renBTC. WBTC uses a custodian and merchant model. tBTC is designed as a decentralized Bitcoin bridge with its own threshold cryptography model. Since RenBridge is legacy, current users generally compare WBTC and tBTC for active liquidity, redemption path, custody assumptions, integrations, and market depth rather than treating renBTC as a fresh bridge option."
+    }
+  ],
+  "compare": {
+    "title": "RenBridge vs current BTC bridge options",
+    "rows": [
+      ["Dimension", "RenBridge", "Current alternative"],
+      ["Status", "Legacy RenVM-era bridge", "Active product-specific route"],
+      ["BTC asset", "renBTC historically", "WBTC, tBTC, or native BTC route"],
+      ["Main concern", "Redemption and legacy liquidity", "Custody model, fees, and integrations"],
+      ["Best use", "Research or legacy asset handling", "New BTC-to-DeFi exposure"]
+    ]
+  },
+  "faq": [
+    {
+      "q": "Is renBTC still the same as BTC?",
+      "a": "renBTC was designed as a Bitcoin-backed representation minted through RenVM, but legacy bridge status and redemption uncertainty mean users should not treat it as equivalent to native BTC without checking current redemption and market liquidity. Its market price can diverge if confidence or liquidity is weak."
+    },
+    {
+      "q": "Can I still bridge BTC with RenBridge?",
+      "a": "Users should assume old RenBridge routes are legacy unless official Ren channels clearly state otherwise. Sending BTC to outdated bridge instructions can be risky. Anyone seeking BTC exposure on Ethereum or other chains should compare currently active alternatives with clear redemption and liquidity."
+    },
+    {
+      "q": "What was the REN token used for?",
+      "a": "REN was the token associated with the Ren protocol and darknode ecosystem. Its historical role related to network operation and economic incentives, not ordinary wallet gas. Token-market value and protocol utility changed as RenBridge moved into legacy status."
+    },
+    {
+      "q": "Why did RenBridge shut down?",
+      "a": "Ren 1.0 was affected by the collapse of Alameda and FTX-related funding and operational issues. The project moved into a sunset and transition period, which made old bridge assumptions unsafe. Users should review official Ren communications for exact historical context before acting on legacy assets."
+    },
+    {
+      "q": "Where can I check RenBridge contracts?",
+      "a": "Ren's GitHub organization contains historical code including bridge and RenVM-related repositories. Block explorers can show token contracts and transactions, but they do not prove that redemption is currently available. Contract checks should be paired with official project status information."
+    },
+    {
+      "q": "What should I do with old renBTC?",
+      "a": "The options depend on current official redemption support and market liquidity. A holder should first verify whether any official redemption path exists. If not, they may need to evaluate secondary-market liquidity, discounts, and counterparty risk. Random recovery links should be avoided."
+    }
+  ],
+  "niche": {
+    "type": "bridge",
+    "asset": "BTC",
+    "receive": "renBTC",
+    "supported_networks": ["Bitcoin", "Ethereum"]
+  },
+  "authority": [
+    {"text": "Ren official site", "url": "https://renproject.io/"},
+    {"text": "RenBridge legacy app", "url": "https://bridge.renproject.io/"},
+    {"text": "Ren GitHub organization", "url": "https://github.com/renproject"},
+    {"text": "Ren on CoinGecko", "url": "https://www.coingecko.com/en/coins/ren"},
+    {"text": "RenJS repository", "url": "https://github.com/renproject/ren-js"}
+  ],
+  "sameAs": [
+    "https://github.com/renproject",
+    "https://www.coingecko.com/en/coins/ren",
+    "https://renproject.io/"
+  ]
+}

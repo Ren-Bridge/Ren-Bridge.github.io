@@ -1,22 +1,22 @@
 {
-  "name": "Ren Bridge",
-  "short_name": "RenBridge",
-  "icons": [
-    {
-      "src": "static/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "static/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ],
-  "theme_color": "#001F3F",
-  "background_color": "#001F3F",
-  "display": "standalone",
-  "start_url": "./"
+ "name": "RenBridge",
+ "short_name": "RenBridge",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#FFFFFF",
+ "theme_color": "#FFFFFF",
+ "icons": [
+  {
+   "src": "static/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any maskable"
+  },
+  {
+   "src": "static/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
 }
