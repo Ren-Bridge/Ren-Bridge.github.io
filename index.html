@@ -3,353 +3,308 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ren Bridge - Bitcoin To DeFi</title>
-  <meta name="description" content="Ren Bridge connects Bitcoin liquidity with DeFi routes from a non-custodial wallet flow. Review assets, costs, timing, and safety before you swap.">
-  <meta name="theme-color" content="#FBFAF7">
+  <title>Ren Bridge — Bitcoin cross-chain bridge</title>
+  <meta name="description" content="Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <meta name="theme-color" content="#eef0f3">
   <link rel="canonical" href="https://ren-bridge.github.io/">
-  <meta name="robots" content="index,follow">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="prefetch" href="dashboard/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Ren Bridge - Bitcoin To DeFi">
-  <meta property="og:description" content="Use Ren Bridge to route Bitcoin liquidity into DeFi from a non-custodial, wallet-native bridge flow.">
-  <meta property="og:image" content="og-cover.png">
-  <meta property="og:url" content="https://ren-bridge.github.io/">
+  <link rel="prefetch" href="dashboard/index.html">
+  <link rel="preconnect" href="https://defillama.com/" crossorigin>
+  <link rel="preconnect" href="https://coins.llama.fi" crossorigin>
+  <meta property="og:type" content="website"><meta property="og:url" content="https://ren-bridge.github.io/">
+  <meta property="og:title" content="Ren Bridge — Bitcoin cross-chain bridge">
+  <meta property="og:description" content="Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20">
+  <meta property="og:site_name" content="Ren Bridge dashboard"><meta property="og:image" content="https://ren-bridge.github.io/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ren Bridge — Bitcoin cross-chain bridge"><meta name="twitter:description" content="Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20"><meta name="twitter:image" content="https://ren-bridge.github.io/og-cover.png">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"WebSite","@id":"https://ren-bridge.github.io/#website","url":"https://ren-bridge.github.io/","name":"Ren Bridge dashboard","inLanguage":"en-US"},
+      {"@type":"Thing","@id":"https://ren-bridge.github.io/#brand","name":"Ren Bridge",
+       "description":"Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 2022.",
+       "sameAs":["https://renprotocol.org/", "https://github.com/renproject", "https://x.com/renprotocol", "https://medium.com/renprotocol"]},
+      {"@type":"WebApplication","@id":"https://ren-bridge.github.io/#widget","name":"Ren Bridge preview","applicationCategory":"FinanceApplication","operatingSystem":"Any","url":"https://ren-bridge.github.io/#route-preview","isPartOf":{"@id":"https://ren-bridge.github.io/#webpage"},"featureList":["Preview the route","Reverse the direction","Open the app"]},
+      {"@type":"WebPage","@id":"https://ren-bridge.github.io/#webpage","url":"https://ren-bridge.github.io/","name":"Ren Bridge \u2014 Bitcoin cross-chain bridge","description":"Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20","isPartOf":{"@id":"https://ren-bridge.github.io/#website"},"about":{"@id":"https://ren-bridge.github.io/#brand"},"mainEntity":{"@id":"https://ren-bridge.github.io/#brand"},"inLanguage":"en-US","mentions":[{"@type":"Thing","name":"RenVM","sameAs":"https://github.com/renproject/ren/wiki"},{"@type":"Thing","name":"renBTC","sameAs":"https://etherscan.io/token/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d"}]},
+      {"@type":"ItemList","@id":"https://ren-bridge.github.io/#resources","name":"Ren Bridge \u2014 resources & references","itemListElement":[{"@type":"ListItem","position":1,"name":"Ren Foundation","url":"https://renprotocol.org/"},{"@type":"ListItem","position":2,"name":"RenVM Wiki","url":"https://github.com/renproject/ren/wiki"},{"@type":"ListItem","position":3,"name":"Ren Client Docs","url":"https://renproject.github.io/ren-client-docs/"},{"@type":"ListItem","position":4,"name":"RenVM Deep Dive","url":"https://coinmarketcap.com/academy/article/bringing-bitcoin-to-defi-a-complete-beginners-deep-dive-into-renvm"},{"@type":"ListItem","position":5,"name":"Ren Brand Hub","url":"https://renproject.github.io/ren-client-docs/ren-js/brand-hub"},{"@type":"ListItem","position":6,"name":"REN on CoinGecko","url":"https://www.coingecko.com/en/coins/ren"},{"@type":"ListItem","position":7,"name":"renBTC on CoinGecko","url":"https://www.coingecko.com/en/coins/renbtc"},{"@type":"ListItem","position":8,"name":"REN on DeFiLlama","url":"https://defillama.com/token/REN"},{"@type":"ListItem","position":9,"name":"renBTC on Etherscan","url":"https://etherscan.io/token/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d"},{"@type":"ListItem","position":10,"name":"renBTC on CoinMarketCap","url":"https://coinmarketcap.com/currencies/renbtc/"},{"@type":"ListItem","position":11,"name":"RenJS Documentation","url":"https://renproject.github.io/ren-client-docs/ren-js"},{"@type":"ListItem","position":12,"name":"RenJS v3 Introduction","url":"https://renproject.github.io/ren-client-docs/ren-js/v3/introduction"},{"@type":"ListItem","position":13,"name":"RenJS Bridge Tutorial","url":"https://renproject.github.io/ren-client-docs/ren-js/tutorial/ren-js"},{"@type":"ListItem","position":14,"name":"Contract Summary","url":"https://renproject.github.io/ren-client-docs/contracts/summary"},{"@type":"ListItem","position":15,"name":"RenJS Source Repository","url":"https://github.com/renproject/ren-js"},{"@type":"ListItem","position":16,"name":"Ren 1.0 Sunset Notice","url":"https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93"},{"@type":"ListItem","position":17,"name":"RenVM Audit Index","url":"https://github.com/renproject/ren/wiki/Audits"},{"@type":"ListItem","position":18,"name":"Trail of Bits Review","url":"https://github.com/trailofbits/publications/blob/master/reviews/renvm.pdf"},{"@type":"ListItem","position":19,"name":"RenVM UX Warnings","url":"https://renproject.github.io/ren-client-docs/ren-js/best-practices/ui-best-practices"},{"@type":"ListItem","position":20,"name":"Proof of Reserve","url":"https://renproject.github.io/ren-client-docs/contracts/proof-of-reserve"}]}
+    ]
+  }
+  </script>
   <style>
-  :root{
-    --bg:#FBFAF7; --panel:#FFFFFF; --field:#F6F5F1;
-    --ink:#15161C; --muted:#646A78; --faint:#9AA0AD;
-    --line:rgba(20,22,30,.09); --line-2:rgba(20,22,30,.05);
-    --accent:#00A2A6; --accent-ink:#00777A; --accent-soft:rgba(0,162,166,.1);
-    --pos:#15A34A;
-    --radius:22px; --radius-sm:14px;
-    --shadow-card:0 1px 0 rgba(20,22,30,.03), 0 34px 64px -30px rgba(20,22,60,.30), 0 10px 24px -18px rgba(20,22,60,.18);
-    --shadow-soft:0 1px 0 rgba(20,22,30,.02), 0 20px 44px -32px rgba(20,22,60,.24);
-    --ui:"Space Grotesk",-apple-system,system-ui,sans-serif;
-    --body:"Inter",-apple-system,system-ui,sans-serif;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0; overflow-x:hidden}
-  body{background:var(--bg); color:var(--ink); font-family:var(--body); line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; position:relative}
-  a{color:inherit; text-decoration:none}
-  a.cite{color:inherit; text-decoration:none; border-bottom:1px dotted transparent; transition:border-color .15s ease}
-  a.cite:hover{border-bottom-color:var(--faint)}
-  img{display:block; max-width:100%}
-  button{font:inherit; cursor:pointer; border:none; background:none; color:inherit}
-  h1,h2,h3,p{margin:0}
-
-  /* texture: fine grid + soft glow */
-  .bg{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
-  .bg .glow{position:absolute; inset:0; background:
-      radial-gradient(720px 480px at 50% -4%, rgba(0,162,166,.12), transparent 62%),
-      radial-gradient(620px 520px at 88% 14%, rgba(0,162,166,.06), transparent 60%);}
-  .bg .grid{position:absolute; inset:-2px;
-    background-image:linear-gradient(rgba(20,22,30,.038) 1px, transparent 1px), linear-gradient(90deg, rgba(20,22,30,.038) 1px, transparent 1px);
-    background-size:128px 128px;
-    -webkit-mask-image:radial-gradient(130% 80% at 50% 8%, #000 44%, transparent 88%);
-            mask-image:radial-gradient(130% 80% at 50% 8%, #000 44%, transparent 88%);}
-
-  .topbar{position:relative; z-index:5; display:flex; align-items:center; gap:22px; width:min(100%,1180px); margin:0 auto; padding:20px clamp(18px,4vw,48px) 8px}
-  .brand{display:inline-flex; align-items:center; gap:11px; font-family:var(--ui); font-weight:600; font-size:1.05rem; letter-spacing:-.01em}
-  .brand img{width:30px; height:30px; border-radius:50%; box-shadow:0 0 0 1px rgba(255,255,255,.8), 0 8px 18px -12px rgba(0,162,166,.5)}
-  .spacer{flex:1}
-  .nav{display:flex; align-items:center; gap:clamp(16px,2.6vw,30px)}
-  .nav a{font-family:var(--ui); font-weight:500; font-size:.92rem; color:var(--muted); transition:color .16s ease}
-  .nav a:hover{color:var(--accent-ink)}
-
-  .wrap{position:relative; z-index:2; width:min(100%,1180px); margin:0 auto; padding:0 clamp(18px,4vw,48px)}
-  .sec{padding-top:clamp(50px,7vh,90px); padding-bottom:clamp(50px,7vh,90px)}
-  .sec-head{text-align:center; max-width:60ch; margin:0 auto clamp(28px,4vh,42px)}
-  .eyebrow{display:inline-flex; align-items:center; gap:9px; font-family:var(--ui); font-weight:600; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-ink)}
-  .eyebrow .dot{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft)}
-  .eyebrow svg{width:15px; height:15px}
-  .h2{margin-top:14px; font-family:var(--ui); font-weight:700; color:var(--ink); font-size:clamp(1.9rem,3.4vw,2.7rem); line-height:1.04; letter-spacing:-.02em}
-  .sec-head p{margin-top:14px; color:var(--muted); font-size:clamp(1rem,1.3vw,1.12rem); line-height:1.6}
-
-  /* hero - CENTERED */
-  .hero{text-align:center; padding-top:clamp(26px,5vh,60px); padding-bottom:clamp(20px,3vh,40px)}
-  .hero .eyebrow{margin:0 auto}
-  .hero h1{margin:22px auto 0; font-family:var(--ui); font-weight:700; color:var(--ink); font-size:clamp(3rem,7vw,5.4rem); line-height:.97; letter-spacing:-.035em; max-width:15ch}
-  .deck{max-width:52ch; margin:20px auto 0; color:var(--muted); font-size:clamp(1.05rem,1.5vw,1.22rem); line-height:1.58}
-  .deck strong{color:var(--ink); font-weight:600; box-shadow:inset 0 -.36em 0 var(--accent-soft)}
-  .cta-row{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px; margin:28px 0 0}
-  .primary{display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:54px; padding:0 28px; border-radius:14px; background:var(--ink); color:#fff; font-family:var(--ui); font-weight:600; font-size:1.02rem; letter-spacing:-.01em; box-shadow:0 16px 30px -16px rgba(20,22,30,.7); transition:transform .18s ease, filter .18s ease}
-  .primary:hover{transform:translateY(-1px); filter:brightness(1.1)}
-  .primary svg{width:17px; height:17px}
-  .ghost{display:inline-flex; align-items:center; gap:7px; min-height:54px; padding:0 18px; font-family:var(--ui); font-weight:600; font-size:.98rem; color:var(--muted); transition:color .16s ease}
-  .ghost:hover{color:var(--accent-ink)}
-  .ghost svg{width:15px; height:15px}
-  .chips{list-style:none; margin:24px 0 0; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:9px}
-  .chips li{display:inline-flex; align-items:center; gap:7px; min-height:36px; padding:7px 14px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.7); font-family:var(--ui); font-weight:500; font-size:.86rem; color:var(--ink)}
-  .chips li::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--accent)}
-
-  /* swap card - CENTERED */
-  .card{width:min(100%,420px); margin:clamp(32px,5vh,48px) auto 0; padding:14px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow-card); position:relative; text-align:left}
-  .card::before{content:""; position:absolute; inset:0 0 auto; height:1px; border-radius:var(--radius) var(--radius) 0 0; background:linear-gradient(90deg, transparent, rgba(0,162,166,.4), transparent)}
-  .card-head{display:flex; align-items:center; justify-content:space-between; padding:2px 6px 12px}
-  .card-head .ct{font-family:var(--ui); font-weight:600; font-size:1.04rem}
-  .pill{display:inline-flex; align-items:center; gap:7px; padding:5px 11px 5px 9px; border-radius:999px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--ui); font-weight:600; font-size:.76rem}
-  .pill .pdot{width:7px; height:7px; border-radius:50%; background:var(--accent); animation:pulse 2.4s ease-out infinite}
-  .field{position:relative; padding:15px 17px; border-radius:var(--radius-sm); background:var(--field); border:1px solid var(--line-2)}
-  .field + .field{margin-top:6px}
-  .flabel{display:block; color:var(--muted); font-size:.82rem; font-weight:500; margin-bottom:12px}
-  .frow{display:flex; align-items:center; justify-content:space-between; gap:12px}
-  .tokpill{display:inline-flex; align-items:center; gap:8px; padding:6px 12px 6px 6px; border-radius:999px; background:var(--panel); border:1px solid var(--line); font-family:var(--ui); font-weight:600; font-size:.98rem; box-shadow:0 1px 0 rgba(20,22,30,.02)}
-  .tokpill img{width:24px; height:24px; border-radius:50%}
-  .tokpill .cv{color:var(--faint); font-size:.8em}
-  .ghostval{color:var(--faint); font-size:.9rem; font-weight:450; white-space:nowrap}
-  .route{position:relative; height:0}
-  .switch{position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:40px; height:40px; border-radius:50%; z-index:3; background:var(--panel); border:4px solid var(--panel); box-shadow:0 0 0 1px var(--line), 0 8px 18px -10px rgba(20,22,60,.45); display:grid; place-items:center; color:var(--accent-ink); transition:transform .25s ease}
-  .switch svg{width:17px; height:17px}
-  .switch:hover{transform:translate(-50%,-50%) rotate(180deg)}
-  .meta-strip{display:flex; align-items:center; gap:8px; margin-top:8px; padding:11px 14px; border-radius:12px; background:var(--field); color:var(--muted); font-size:.82rem}
-  .meta-strip svg{width:15px; height:15px; color:var(--accent-ink); flex:none}
-  .cta{display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:8px; min-height:52px; border-radius:14px; background:var(--ink); color:#fff; font-family:var(--ui); font-weight:600; font-size:1rem; box-shadow:0 14px 28px -16px rgba(20,22,30,.65); transition:transform .18s ease, filter .18s ease}
-  .cta:hover{transform:translateY(-1px); filter:brightness(1.1)}
-  .note{margin:11px 0 2px; text-align:center; color:var(--faint); font-size:.78rem}
-
-  /* how it works - horizontal connector */
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; position:relative}
-  .steps::before{content:""; position:absolute; top:23px; left:15%; right:15%; height:1px; background:linear-gradient(90deg, transparent, var(--line), transparent)}
-  .step{text-align:center; padding:0 8px}
-  .step .node{width:46px; height:46px; margin:0 auto; border-radius:50%; display:grid; place-items:center; background:var(--panel); border:1px solid var(--line); color:var(--accent-ink); font-family:var(--ui); font-weight:700; font-size:1rem; position:relative; z-index:1; box-shadow:0 0 0 5px var(--bg), var(--shadow-soft)}
-  .step h3{margin:16px 0 8px; font-family:var(--ui); font-weight:600; font-size:1.1rem; color:var(--ink); letter-spacing:-.01em}
-  .step p{color:var(--muted); font-size:.93rem; line-height:1.55; max-width:30ch; margin:0 auto}
-
-  /* benefits */
-  .benefits{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-  .ben{padding:24px 22px; background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow-soft); text-align:center}
-  .ben .ico{width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background:var(--accent-soft); color:var(--accent-ink); margin:0 auto 14px}
-  .ben .ico svg{width:21px; height:21px}
-  .ben h3{font-family:var(--ui); font-weight:600; font-size:1.1rem; color:var(--ink); letter-spacing:-.01em}
-  .ben p{margin-top:8px; color:var(--muted); font-size:.94rem; line-height:1.55}
-
-  /* FAQ - single centered column */
-  .faq{max-width:760px; margin:0 auto}
-  .qa{padding:22px 4px; border-top:1px solid var(--line)}
-  .qa:first-child{border-top:none}
-  .qa h3{font-family:var(--ui); font-weight:600; font-size:1.12rem; color:var(--ink); letter-spacing:-.01em; display:flex; gap:12px}
-  .qa h3 .qn{color:var(--accent-ink); font-size:.9rem; font-weight:700; padding-top:3px}
-  .qa p{margin-top:10px; padding-left:30px; color:var(--muted); font-size:.97rem; line-height:1.65}
-  .qa a:not(.cite){color:var(--accent-ink); font-weight:600}
-
-  /* related */
-  .related{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
-  .rel{display:flex; flex-direction:column; gap:7px; padding:22px; background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-soft); transition:transform .16s ease, border-color .16s ease}
-  .rel:hover{transform:translateY(-2px); border-color:rgba(0,162,166,.35)}
-  .rel .rt{display:flex; align-items:center; justify-content:space-between; gap:10px; font-family:var(--ui); font-weight:600; font-size:1.05rem; color:var(--ink); letter-spacing:-.01em}
-  .rel .rt svg{width:16px; height:16px; color:var(--accent-ink); flex:none}
-  .rel p{color:var(--muted); font-size:.9rem; line-height:1.5}
-
-  .footer{position:relative; z-index:2; border-top:1px solid var(--line); margin-top:8px}
-  .footer .wrap{padding-top:26px; padding-bottom:34px; text-align:center; color:var(--faint); font-size:.84rem}
-  .footer b{color:var(--muted); font-weight:600}
-
-  @keyframes pulse{0%{box-shadow:0 0 0 0 var(--accent-soft)} 70%{box-shadow:0 0 0 8px rgba(0,162,166,0)} 100%{box-shadow:0 0 0 0 rgba(0,162,166,0)}}
-
-  @media (max-width:920px){
-    .nav{display:none}
-    .steps{grid-template-columns:1fr; gap:24px}
-    .steps::before{display:none}
-    .benefits,.related{grid-template-columns:1fr}
-  }
-  @media (max-width:430px){
-    .hero h1{font-size:clamp(2.6rem,13vw,3.6rem)}
-    .cta-row .primary,.cta-row .ghost{width:100%}
-  }
-  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important; transition-duration:.01ms!important}}
+:root{
+  --bg:#eef0f3; --bg-2:#e7eaef; --panel:#ffffff; --field:#f1f3f7; --field-2:#e9edf2;
+  --ink:#151a21; --text:#414954; --muted:#6a727d; --faint:#9aa2ad;
+  --line:rgba(20,26,33,.09); --line-2:rgba(20,26,33,.14);
+  --accent:#00A2A6; --accent-ink:#004346; --accent-soft:rgba(0,162,166,0.13); --accent-glow:rgba(0,162,166,0.3);
+  --cta:#171a20; --cta-hover:#0a0c10; --cta-ink:#ffffff;
+  --shadow-card:0 1px 0 rgba(20,26,33,.02), 0 40px 80px -42px rgba(24,32,48,.40), 0 14px 30px -22px rgba(24,32,48,.24);
+  --shadow-pop:0 24px 60px -26px rgba(24,32,48,.38), 0 8px 20px -12px rgba(24,32,48,.22);
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease: cubic-bezier(0.22, 0.7, 0.24, 1);
+  color-scheme: light;
+}
+html[data-theme="dark"]{
+  --bg:#0b0e13; --bg-2:#0e131b; --panel:#141a24; --field:#1b2230; --field-2:#232c3d;
+  --ink:#e9eef7; --text:#bcc5d6; --muted:#8b95a8; --faint:#606a7e;
+  --line:rgba(226,234,250,.10); --line-2:rgba(226,234,250,.18);
+  --accent:#47bcbe; --accent-ink:#7fd0d2; --accent-soft:rgba(71,188,190,0.16); --accent-glow:rgba(71,188,190,0.34);
+  --cta:#47bcbe; --cta-hover:#3da1a3; --cta-ink:#12161c;
+  --shadow-card:0 30px 70px -34px rgba(0,0,0,.66), 0 6px 18px -10px rgba(0,0,0,.5);
+  --shadow-pop:0 24px 60px -26px rgba(0,0,0,.7);
+  color-scheme: dark;
+}
+*{ box-sizing:border-box; }
+html{ height:100%; scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+body{ margin:0; min-width:320px; height:100%; overflow:hidden; color:var(--text); background:var(--bg); font-family:var(--font); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+a{ color:inherit; text-decoration:none; }
+button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+img{ display:block; max-width:100%; }
+h1,h2,h3,p{ margin:0; }
+a:focus-visible, button:focus-visible, summary:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:10px; }
+.skip{ position:absolute; left:-999px; }
+.skip:focus{ left:12px; top:12px; z-index:120; padding:9px 15px; border-radius:10px; background:var(--cta); color:var(--cta-ink); font-weight:750; }
+.bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; background:
+  radial-gradient(1100px 700px at 82% 116%, var(--bg-2), transparent 60%),
+  radial-gradient(900px 620px at -6% -8%, var(--bg-2), transparent 58%); }
+.bg::before{ content:""; position:absolute; right:-14%; bottom:-30%; width:min(92vw,940px); aspect-ratio:1; border-radius:50%;
+  background:repeating-radial-gradient(circle at center, transparent 0 86px, var(--line) 86px 87px); opacity:.5; mask:radial-gradient(circle at center, #000 62%, transparent 72%); }
+.bg::after{ content:""; position:absolute; left:-10%; top:-16%; width:min(70vw,560px); aspect-ratio:1; border-radius:50%;
+  background:repeating-radial-gradient(circle at center, transparent 0 64px, var(--line) 64px 65px); opacity:.4; mask:radial-gradient(circle at center, #000 60%, transparent 72%); }
+.topbar{ position:relative; z-index:70; flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; gap:14px; padding:13px clamp(16px,3.4vw,34px);
+  background:color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter:saturate(140%) blur(12px); -webkit-backdrop-filter:saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
+.tb-left{ display:flex; align-items:center; gap:12px; min-width:0; }
+.hamb{ display:grid; place-items:center; width:40px; height:40px; flex:0 0 auto; position:relative; border:1px solid var(--line-2); border-radius:12px; background:var(--panel); color:var(--ink); transition:border-color .15s var(--ease); }
+.hamb:hover{ border-color:var(--accent); }
+.hamb .bar{ position:absolute; left:11px; right:11px; height:2px; border-radius:2px; background:currentColor; transition:transform .24s var(--ease), opacity .18s var(--ease); }
+.hamb .bar:nth-child(1){ top:14px; } .hamb .bar:nth-child(2){ top:19px; } .hamb .bar:nth-child(3){ top:24px; }
+body.drawer-open .hamb .bar:nth-child(1){ transform:translateY(5px) rotate(45deg); }
+body.drawer-open .hamb .bar:nth-child(2){ opacity:0; }
+body.drawer-open .hamb .bar:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
+.brand{ display:flex; align-items:center; gap:11px; min-width:0; }
+.brand-logo{ width:34px; height:34px; flex:0 0 auto; display:grid; place-items:center; border-radius:10px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line-2); }
+.brand-logo img{ width:22px; height:22px; border-radius:50%; }
+.brand-name{ font-size:19px; font-weight:820; letter-spacing:-0.03em; color:var(--ink); line-height:1.1; white-space:nowrap; }
+.tb-right{ display:flex; align-items:center; gap:9px; }
+.theme-toggle{ display:inline-flex; align-items:center; gap:2px; padding:3px; border-radius:999px; background:var(--field); box-shadow:inset 0 0 0 1px var(--line); }
+.theme-toggle button{ display:grid; place-items:center; width:30px; height:30px; border-radius:999px; color:var(--muted); transition:color .15s var(--ease), background-color .15s var(--ease); }
+.theme-toggle button svg{ width:15px; height:15px; }
+.theme-toggle button[aria-pressed="true"]{ color:var(--ink); background:var(--panel); box-shadow:0 2px 8px -3px rgba(0,0,0,.28); }
+.btn-app{ display:inline-flex; align-items:center; gap:8px; padding:9px 15px; border-radius:11px; background:var(--panel); color:var(--ink); font-size:13.5px; font-weight:700; letter-spacing:-0.01em; box-shadow:inset 0 0 0 1px var(--line-2); transition:box-shadow .15s var(--ease), transform .15s var(--ease); white-space:nowrap; }
+.btn-app svg{ width:16px; height:16px; color:var(--muted); }
+.btn-app:hover{ box-shadow:inset 0 0 0 1px var(--accent); transform:translateY(-1px); }
+.btn-app:hover svg{ color:var(--accent-ink); }
+.scrim{ position:fixed; inset:0; z-index:80; background:rgba(10,14,17,.42); opacity:0; visibility:hidden; transition:opacity .28s var(--ease), visibility .28s var(--ease); }
+body.drawer-open .scrim{ opacity:1; visibility:visible; }
+.drawer{ position:fixed; z-index:90; top:0; left:0; height:100dvh; width:300px; max-width:86vw; display:flex; flex-direction:column; padding:16px 14px 16px; background:var(--panel); border-right:1px solid var(--line); box-shadow:var(--shadow-pop);
+  transform:translateX(-104%); transition:transform .3s var(--ease); overflow-y:auto; }
+body.drawer-open .drawer{ transform:translateX(0); }
+.drawer-head{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 6px 8px; }
+.drawer-head .brand-name{ font-size:15px; }
+.drawer-close{ display:grid; place-items:center; width:34px; height:34px; border-radius:10px; color:var(--muted); }
+.drawer-close:hover{ color:var(--ink); background:var(--field); }
+.drawer-close svg{ width:17px; height:17px; }
+.nav-label{ margin:15px 12px 6px; font-size:10px; font-weight:750; letter-spacing:0.15em; text-transform:uppercase; color:var(--faint); }
+.nav-item{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.nav-item .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
+.nav-item.is-active{ color:var(--accent-ink); background:var(--accent-soft); }
+.nav-item.is-active .ni-ico{ color:var(--accent-ink); }
+.nav-item:hover{ color:var(--ink); background:var(--field); }
+.nav-group{ border-radius:10px; }
+.nav-group summary{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; cursor:pointer; list-style:none; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.nav-group summary::-webkit-details-marker{ display:none; }
+.nav-group summary .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
+.nav-group summary .chev{ width:15px; height:15px; margin-left:auto; color:var(--faint); transition:transform .2s var(--ease); }
+.nav-group summary:hover{ color:var(--ink); background:var(--field); }
+.nav-group[open] summary{ color:var(--ink); }
+.nav-group[open] summary .chev{ transform:rotate(180deg); }
+.nav-sub{ display:flex; flex-direction:column; gap:1px; padding:2px 0 8px 42px; }
+.nav-sub a{ display:flex; align-items:baseline; gap:7px; padding:6px 10px; border-radius:8px; color:var(--muted); font-size:12.5px; font-weight:550; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.nav-sub a small{ color:var(--faint); font-size:10.5px; font-weight:500; }
+.nav-sub a:hover{ color:var(--accent-ink); background:var(--field); }
+.drawer-foot{ margin-top:auto; padding-top:13px; border-top:1px solid var(--line); }
+.disclose{ margin:8px 8px 0; font-size:11px; line-height:1.5; color:var(--muted); }
+.disclose strong{ color:var(--text); font-weight:750; }
+.fine{ margin:6px 8px 0; font-size:10.5px; line-height:1.45; color:var(--faint); }
+.app{ height:100dvh; display:flex; flex-direction:column; overflow:hidden; position:relative; z-index:1; }
+.wrap{ flex:1 1 auto; min-height:0; display:grid; place-items:center; overflow:hidden; }
+.stage{ width:100%; max-width:560px; max-height:100%; margin-inline:auto; padding:clamp(14px,3vh,36px) clamp(16px,3.4vw,26px); display:flex; flex-direction:column; align-items:center; text-align:center; }
+.lead{ margin:0 0 clamp(13px,2.2vh,20px); max-width:24ch; font-size:clamp(19px,2.5vw,27px); line-height:1.16; letter-spacing:-0.025em; font-weight:750; color:var(--ink); }
+.lead .hl{ color:var(--accent-ink); }
+.hero-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:clamp(13px,2.2vh,18px); }
+.hchip{ display:inline-flex; align-items:baseline; gap:7px; padding:8px 13px; border-radius:12px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line); font-size:12px; font-weight:600; color:var(--muted); transition:box-shadow .15s var(--ease), color .15s var(--ease); }
+.hchip b{ color:var(--ink); font-family:var(--mono); font-size:12.5px; font-weight:650; font-variant-numeric:tabular-nums; }
+.hchip .ext{ color:var(--faint); font-size:10px; }
+a.hchip:hover{ box-shadow:inset 0 0 0 1px var(--accent); color:var(--text); }
+a.hchip:hover .ext{ color:var(--accent-ink); }
+.swap-card{ position:relative; width:min(480px,100%); border-radius:28px; background:var(--panel); padding:clamp(20px,4vw,30px); text-align:left; box-shadow:var(--shadow-card); }
+.card-head{ display:flex; align-items:center; justify-content:space-between; margin:2px 4px 17px; }
+.card-title{ font-size:15px; font-weight:800; letter-spacing:-0.02em; color:var(--ink); }
+.badge{ display:inline-flex; align-items:center; gap:6px; padding:5px 11px; border-radius:999px; color:var(--accent-ink); background:var(--accent-soft); font-size:10px; font-weight:750; letter-spacing:0.07em; text-transform:uppercase; }
+.badge i{ width:6px; height:6px; border-radius:50%; background:var(--accent); }
+.field{ position:relative; padding:17px 18px 18px; border-radius:19px; background:var(--field); }
+.field + .field{ margin-top:6px; }
+.field-top{ display:flex; align-items:center; justify-content:space-between; }
+.field-label{ font-size:12px; font-weight:600; color:var(--muted); }
+.field-bal{ font-size:11px; font-weight:600; color:var(--faint); }
+.field-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:11px; min-width:0; }
+.amount{ min-width:0; }
+.amount b{ display:block; font-size:clamp(29px,5vw,38px); font-weight:750; line-height:1; letter-spacing:-0.02em; color:var(--ink); font-variant-numeric:tabular-nums; }
+.amount span{ display:block; margin-top:6px; font-size:11px; font-weight:600; color:var(--faint); }
+.token-pill{ display:inline-flex; align-items:center; gap:10px; flex:0 0 auto; padding:7px 12px 7px 8px; border-radius:999px; background:var(--panel); box-shadow:0 4px 14px -8px rgba(0,0,0,.4), inset 0 0 0 1px var(--line); transition:box-shadow .15s var(--ease); }
+.token-pill:hover{ box-shadow:0 6px 18px -8px rgba(0,0,0,.42), inset 0 0 0 1px var(--line-2); }
+.token-pill img{ width:26px; height:26px; flex:0 0 auto; border-radius:50%; }
+.token-meta{ display:flex; flex-direction:column; line-height:1.05; min-width:0; }
+.token-meta small{ font-size:9.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); }
+.token-meta b{ font-size:15px; font-weight:800; letter-spacing:-0.01em; color:var(--ink); white-space:nowrap; }
+.token-pill .chev{ width:14px; height:14px; flex:0 0 auto; color:var(--faint); }
+.reverse{ position:relative; z-index:2; display:grid; place-items:center; width:40px; height:40px; margin:-14px auto; border:4px solid var(--panel); border-radius:13px; background:var(--field-2); color:var(--muted); box-shadow:0 6px 16px -8px rgba(0,0,0,.4); transition:transform .28s var(--ease), color .15s var(--ease), background-color .15s var(--ease); }
+.reverse svg{ width:16px; height:16px; }
+.reverse:hover{ color:var(--cta-ink); background:var(--accent); transform:rotate(180deg); }
+.details-btn{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:12px; padding:12px; border-radius:14px; background:var(--field); color:var(--muted); font-size:12px; font-weight:750; letter-spacing:0.06em; text-transform:uppercase; transition:color .15s var(--ease), background-color .15s var(--ease); }
+.details-btn svg{ width:14px; height:14px; transition:transform .2s var(--ease); }
+.details-btn:hover{ color:var(--ink); }
+.details-btn[aria-expanded="true"] svg{ transform:rotate(180deg); }
+.details{ overflow:hidden; max-height:0; opacity:0; transition:max-height .3s var(--ease), opacity .22s var(--ease), margin .3s var(--ease); }
+.details.open{ max-height:280px; opacity:1; margin-top:6px; }
+.d-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 8px; border-bottom:1px solid var(--line); }
+.d-row:last-child{ border-bottom:0; }
+.d-row span{ font-size:12.5px; font-weight:600; color:var(--muted); }
+.d-row b{ font-size:12.5px; font-weight:700; color:var(--text); }
+.d-row b.ok{ color:var(--accent-ink); }
+.d-row b.mono{ font-family:var(--mono); font-size:11px; }
+.cta{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; padding:16px; border-radius:16px; background:var(--cta); color:var(--cta-ink); font-size:15px; font-weight:800; letter-spacing:0.03em; text-transform:uppercase; box-shadow:0 16px 34px -16px rgba(0,0,0,.5); transition:background-color .15s var(--ease), transform .15s var(--ease); }
+.cta svg{ width:16px; height:16px; }
+.cta:hover{ background:var(--cta-hover); transform:translateY(-1px); }
+.card-note{ margin:13px 4px 0; font-size:11px; line-height:1.5; color:var(--faint); text-align:center; }
+.card-note a{ color:var(--muted); text-decoration:underline; text-decoration-color:var(--line-2); text-underline-offset:2px; }
+.card-note a:hover{ color:var(--accent-ink); }
+@media (max-width:560px){
+  .brand-name{ font-size:16px; } .btn-app span{ display:none; } .btn-app{ padding:9px 11px; }
+  .stage{ padding:12px 16px; }
+  .lead{ font-size:clamp(18px,5.5vw,24px); margin-bottom:14px; }
+  .swap-card{ padding:18px; } .field{ padding:14px 15px 15px; } .amount b{ font-size:29px; }
+  .hero-chips{ margin-top:12px; }
+}
+@media (max-height:700px){ .lead{ font-size:clamp(17px,4.5vw,21px); margin-bottom:10px; } .hero-chips{ display:none; } }
+@media (max-height:600px){ .field{ padding:12px 15px 13px; } .amount b{ font-size:26px; } .details-btn{ margin-top:8px; padding:9px; } .cta{ padding:14px; margin-top:8px; } }
+@media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
   </style>
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <div class="bg" aria-hidden="true"><div class="glow"></div><div class="grid"></div></div>
+  <a class="skip" href="#route-preview">Skip to preview</a>
+  <div class="bg" aria-hidden="true"></div>
 
+  <div class="app">
   <header class="topbar">
-    <a class="brand" href="./">
-      <img src="favicon.png" width="30" height="30" alt="">
-      <span>Ren Bridge</span>
-    </a>
-    <span class="spacer"></span>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="how-it-works/">How it works</a>
-      <a href="faq/">FAQ</a>
-      <a href="about/">About</a>
-      <a href="security/">Security</a>
-      <a href="supported-chains/">Supported Chains</a>
-    </nav>
+    <div class="tb-left">
+      <button class="hamb" type="button" id="hamb" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt="Ren Bridge logo"></span><h1 class="brand-name">Ren Bridge</h1></div>
+    </div>
+    <div class="tb-right">
+      <div class="theme-toggle" role="group" aria-label="Color theme">
+        <button type="button" id="theme-light" aria-pressed="true" aria-label="Light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button>
+        <button type="button" id="theme-dark" aria-pressed="false" aria-label="Dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a6.5 6.5 0 1 0 10.5 10.5z"/></svg></button>
+      </div>
+      <a class="btn-app" href="dashboard/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M16 11h2"/></svg><span>Open app</span></a>
+    </div>
   </header>
 
-  <main>
-    <!-- HERO (centered) -->
-    <section class="wrap hero">
-      <span class="eyebrow"><span class="dot"></span>Bitcoin DeFi Bridge</span>
-      <h1>Ren Bridge</h1>
-      <p class="deck">Ren Bridge gives Bitcoin holders a <strong>non-custodial route into DeFi</strong>: connect a wallet, choose the live asset path, and review every cost and timing detail before signing. Reference the <a class="cite" href="https://docs.renproject.io/ren/" rel="nofollow noopener noreferrer">protocol documentation</a> when you want the deeper technical context.</p>
-      <div class="cta-row">
-        <a class="primary" href="dashboard/">Open App
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="ghost" href="how-it-works/">How it works
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <ul class="chips">
-        <li>Non-custodial</li>
-        <li>Bitcoin routing</li>
-        <li>Wallet-native</li>
-        <li>Live quotes in app</li>
-      </ul>
-
-      <section class="card" aria-label="Bridge preview">
-        <div class="card-head">
-          <span class="ct">Bridge</span>
-          <span class="pill"><span class="pdot"></span>Preview</span>
-        </div>
-        <div class="field">
-          <span class="flabel">From</span>
-          <div class="frow">
-            <button class="tokpill" type="button"><img src="btc.png" alt="BTC">BTC <span class="cv" aria-hidden="true">&#9662;</span></button>
-            <span class="ghostval">Amount in app</span>
-          </div>
-        </div>
-        <div class="route">
-          <button class="switch" type="button" data-switch aria-label="Switch direction">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
-          </button>
-        </div>
-        <div class="field">
-          <span class="flabel">To</span>
-          <div class="frow">
-            <button class="tokpill" type="button"><img src="ren.png" alt="REN">REN <span class="cv" aria-hidden="true">&#9662;</span></button>
-            <span class="ghostval">Live quote in app</span>
-          </div>
-        </div>
-        <div class="meta-strip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 5v5l3 3"/></svg>
-          Route, timing, slippage and network fees are shown before you sign.
-        </div>
-        <a class="cta" href="dashboard/">Open App</a>
-        <p class="note">Preview only - non-custodial - connect your wallet in the app</p>
-      </section>
-    </section>
-
-    <!-- HOW IT WORKS (connector) -->
-    <section class="wrap sec" id="how">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>How it works</span>
-        <h2 class="h2">Use Ren Bridge in three clean steps</h2>
-        <p>Ren Bridge is built around the same pattern serious DeFi users expect: select the route, inspect the live quote, then approve only from your wallet.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="node">1</div>
-          <h3>Connect your wallet</h3>
-          <p>Open the app and connect a <a class="cite" href="https://metamask.io/" rel="nofollow noopener noreferrer">wallet connection</a> you control. The app does not need an exchange account or custody of your private keys.</p>
-        </div>
-        <div class="step">
-          <div class="node">2</div>
-          <h3>Choose the live route</h3>
-          <p>Select BTC or the supported Ren asset path, then pick the destination available in the app. Routes can involve Bitcoin liquidity and Ethereum-compatible DeFi rails.</p>
-        </div>
-        <div class="step">
-          <div class="node">3</div>
-          <h3>Review and confirm</h3>
-          <p>Check estimated timing, token output, route details and <a class="cite" href="https://etherscan.io/gastracker" rel="nofollow noopener noreferrer">gas tracker</a> context before you sign the wallet transaction.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="why">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg>Why Ren Bridge</span>
-        <h2 class="h2">Bitcoin liquidity without leaving self-custody</h2>
-      </div>
-      <div class="benefits">
-        <div class="ben">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-          <h3>Self-custody first</h3>
-          <p>You keep control of the wallet and approve the bridge transaction yourself. That makes the flow feel closer to DeFi than a centralized deposit screen.</p>
-        </div>
-        <div class="ben">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
-          <h3>Bitcoin to DeFi paths</h3>
-          <p>Ren Bridge is aimed at routing Bitcoin-side liquidity toward supported DeFi assets and chains, including routes that touch <a class="cite" href="https://ethereum.org/en/bridges/" rel="nofollow noopener noreferrer">cross-chain bridge guidance</a>.</p>
-        </div>
-        <div class="ben">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9 9 9 0 0 1-9 9"/><path d="M3 12h6l2-3 2 6 2-3h2"/></svg></span>
-          <h3>Quote before action</h3>
-          <p>The preview stays number-free here, while the app shows the current route, output estimate, network cost and confirmation status before you commit.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ (single column) -->
-    <section class="wrap sec" id="faq">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .8-1 1.7M12 17h.01"/></svg>FAQ</span>
-        <h2 class="h2">Ren Bridge questions, answered</h2>
-      </div>
-      <div class="faq">
-        <div class="qa">
-          <h3><span class="qn">01</span>What is Ren Bridge?</h3>
-          <p>Ren Bridge is a non-custodial DeFi app for bridge and swap routes connected to Ren-style Bitcoin liquidity. It helps users move between BTC, REN-related routes and supported DeFi destinations from a wallet-controlled flow.</p>
-        </div>
-        <div class="qa">
-          <h3><span class="qn">02</span>Which assets and chains does Ren Bridge support?</h3>
-          <p>Supported assets and chains are displayed in the app because route availability can change with liquidity, network status and wallet support. Check the live app and the <a href="supported-chains/">supported chains</a> page before preparing a transfer.</p>
-        </div>
-        <div class="qa">
-          <h3><span class="qn">03</span>How long does a Ren Bridge transfer take?</h3>
-          <p>Timing depends on the source chain, destination chain, wallet confirmation, bridge route and network congestion. The app shows the current estimate before you confirm, so you can decide whether the route fits your needs.</p>
-        </div>
-        <div class="qa">
-          <h3><span class="qn">04</span>What does Ren Bridge cost?</h3>
-          <p>Costs depend on the live route, asset, gas environment and any route-level charges shown by the app. Review the quote carefully before signing; no fixed fee or cheapest-route claim is assumed on this page.</p>
-        </div>
-        <div class="qa">
-          <h3><span class="qn">05</span>Is Ren Bridge safe to use?</h3>
-          <p>Use the same security discipline you would use for any bridge: verify the URL, inspect wallet prompts, test unfamiliar routes cautiously, and compare bridge context with <a class="cite" href="https://defillama.com/bridges" rel="nofollow noopener noreferrer">bridge market data</a> before moving meaningful value.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap sec" id="more">
-      <div class="sec-head">
-        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg>Learn more</span>
-        <h2 class="h2">Explore Ren Bridge</h2>
-      </div>
-      <div class="related">
-        <a class="rel" href="how-it-works/"><span class="rt">How it works <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Walk through the bridge flow from wallet connection to final confirmation.</p></a>
-        <a class="rel" href="security/"><span class="rt">Security <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>Review the self-custody habits that matter before using any bridge route.</p></a>
-        <a class="rel" href="supported-chains/"><span class="rt">Supported chains <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span><p>See which chains and assets are available before opening a Ren Bridge route.</p></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      
+  <div class="scrim" id="scrim" tabindex="-1"></div>
+  <aside class="drawer" id="drawer" aria-label="Primary" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt=""></span><span class="brand-name">Ren Bridge</span></div>
+      <button class="drawer-close" type="button" id="drawer-close" aria-label="Close navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
-  </footer>
+    <nav aria-label="Sections">
+      <p class="nav-label">Bridge</p>
+      <a class="nav-item is-active" href="#route-preview" aria-current="page"><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 10h11l-3-3M17 14H6l3 3"/></svg>Route preview</a>
+      <p class="nav-label">Understand</p>
+      <details class="nav-group" open><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>What RenBridge was<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://renprotocol.org/" target="_blank" rel="noopener noreferrer">Ren Foundation <small>Current foundation overview</small></a><a href="https://github.com/renproject/ren/wiki" target="_blank" rel="noopener noreferrer">RenVM Wiki <small>Protocol architecture overview</small></a><a href="https://renproject.github.io/ren-client-docs/" target="_blank" rel="noopener noreferrer">Ren Client Docs <small>Official client documentation</small></a><a href="https://coinmarketcap.com/academy/article/bringing-bitcoin-to-defi-a-complete-beginners-deep-dive-into-renvm" target="_blank" rel="noopener noreferrer">RenVM Deep Dive <small>Beginner RenVM deep dive</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/brand-hub" target="_blank" rel="noopener noreferrer">Ren Brand Hub <small>Official product definitions</small></a></div></details>
+      <p class="nav-label">Markets &amp; data</p>
+      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Tokens and contracts<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://www.coingecko.com/en/coins/ren" target="_blank" rel="noopener noreferrer">REN on CoinGecko <small>Live REN market data</small></a><a href="https://www.coingecko.com/en/coins/renbtc" target="_blank" rel="noopener noreferrer">renBTC on CoinGecko <small>Live renBTC market data</small></a><a href="https://defillama.com/token/REN" target="_blank" rel="noopener noreferrer">REN on DeFiLlama <small>REN pools and yields</small></a><a href="https://etherscan.io/token/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d" target="_blank" rel="noopener noreferrer">renBTC on Etherscan <small>Ethereum token contract</small></a><a href="https://coinmarketcap.com/currencies/renbtc/" target="_blank" rel="noopener noreferrer">renBTC on CoinMarketCap <small>Live renBTC market page</small></a></div></details>
+      <p class="nav-label">Guides</p>
+      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Archived integration guides<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://renproject.github.io/ren-client-docs/ren-js" target="_blank" rel="noopener noreferrer">RenJS Documentation <small>Archived SDK documentation</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/v3/introduction" target="_blank" rel="noopener noreferrer">RenJS v3 Introduction <small>Archived RenJS architecture</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/tutorial/ren-js" target="_blank" rel="noopener noreferrer">RenJS Bridge Tutorial <small>Historical bridge tutorial</small></a><a href="https://renproject.github.io/ren-client-docs/contracts/summary" target="_blank" rel="noopener noreferrer">Contract Summary <small>Deployed contract model</small></a><a href="https://github.com/renproject/ren-js" target="_blank" rel="noopener noreferrer">RenJS Source Repository <small>Official SDK source</small></a></div></details>
+      <p class="nav-label">Safety</p>
+      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Shutdown and audits<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93" target="_blank" rel="noopener noreferrer">Ren 1.0 Sunset Notice <small>Official Ren 1.0 sunset</small></a><a href="https://github.com/renproject/ren/wiki/Audits" target="_blank" rel="noopener noreferrer">RenVM Audit Index <small>Four completed audits</small></a><a href="https://github.com/trailofbits/publications/blob/master/reviews/renvm.pdf" target="_blank" rel="noopener noreferrer">Trail of Bits Review <small>Independent cryptography review</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/best-practices/ui-best-practices" target="_blank" rel="noopener noreferrer">RenVM UX Warnings <small>Historical loss warnings</small></a><a href="https://renproject.github.io/ren-client-docs/contracts/proof-of-reserve" target="_blank" rel="noopener noreferrer">Proof of Reserve <small>Reserve oracle documentation</small></a></div></details>
+    </nav>
+    <div class="drawer-foot">
+      <p class="disclose"><strong>Independent dashboard.</strong> Not affiliated with any protocol or issuer named here.</p>
+      <p class="fine">Live figures come from public third-party sources and change. Educational reference only.</p>
+    </div>
+  </aside>
 
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"WebSite","@id":"https://ren-bridge.github.io/#website","url":"https://ren-bridge.github.io/","name":"Ren Bridge"},
-    {"@type":"Organization","@id":"https://ren-bridge.github.io/#org","name":"Ren Bridge","url":"https://ren-bridge.github.io/","logo":"https://ren-bridge.github.io/favicon.png"},
-    {"@type":"WebApplication","@id":"https://ren-bridge.github.io/#app","name":"Ren Bridge","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://ren-bridge.github.io/","browserRequirements":"Requires a Web3 wallet","description":"Non-custodial DeFi app for Ren Bridge routes, Bitcoin liquidity, supported assets, and wallet-native bridge or swap flows."},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"What is Ren Bridge?","acceptedAnswer":{"@type":"Answer","text":"Ren Bridge is a non-custodial DeFi app for bridge and swap routes connected to Ren-style Bitcoin liquidity. It helps users move between BTC, REN-related routes and supported DeFi destinations from a wallet-controlled flow."}},
-      {"@type":"Question","name":"Which assets and chains does Ren Bridge support?","acceptedAnswer":{"@type":"Answer","text":"Supported assets and chains are displayed in the app because route availability can change with liquidity, network status and wallet support. Check the live app and the supported chains page before preparing a transfer."}},
-      {"@type":"Question","name":"How long does a Ren Bridge transfer take?","acceptedAnswer":{"@type":"Answer","text":"Timing depends on the source chain, destination chain, wallet confirmation, bridge route and network congestion. The app shows the current estimate before you confirm, so you can decide whether the route fits your needs."}},
-      {"@type":"Question","name":"What does Ren Bridge cost?","acceptedAnswer":{"@type":"Answer","text":"Costs depend on the live route, asset, gas environment and any route-level charges shown by the app. Review the quote carefully before signing; no fixed fee or cheapest-route claim is assumed on this page."}},
-      {"@type":"Question","name":"Is Ren Bridge safe to use?","acceptedAnswer":{"@type":"Answer","text":"Use the same security discipline you would use for any bridge: verify the URL, inspect wallet prompts, test unfamiliar routes cautiously, and compare bridge context before moving meaningful value."}}
-    ]}
-  ]}
-  </script>
+  <div class="wrap">
+    <main class="stage">
+      <h2 class="lead"><span class="hl">Bitcoin</span> cross-chain bridge</h2>
+      <div class="swap-card" id="route-preview" aria-label="Ren Bridge preview">
+          <div class="card-head"><span class="card-title">RenBridge status</span><span class="badge"><i aria-hidden="true"></i> Preview</span></div>
+          <div class="field">
+            <div class="field-top"><span class="field-label">You send</span><span class="field-bal">Illustrative</span></div>
+            <div class="field-row"><div class="amount"><b>1.00</b><span id="sub-from">on BTC</span></div>
+              <span class="token-pill" id="pill-from"><img src="btc.png" alt="BTC logo" width="26" height="26"><span class="token-meta"><small>From</small><b>BTC</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
+          </div>
+          <button class="reverse" type="button" id="reverse" aria-label="Reverse direction" title="Reverse direction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 4v13M8 4L4 8M8 4l4 4M16 20V7M16 20l-4-4M16 20l4-4"/></svg></button>
+          <div class="field">
+            <div class="field-top"><span class="field-label">You receive</span><span class="field-bal">minus gas</span></div>
+            <div class="field-row"><div class="amount"><b>≈ 1.00</b><span id="sub-to">on REN</span></div>
+              <span class="token-pill" id="pill-to"><img src="ren.png" alt="REN logo" width="26" height="26"><span class="token-meta"><small>To</small><b>REN</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
+          </div>
+          <button class="details-btn" type="button" id="details-btn" aria-expanded="false" aria-controls="details">Show details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="details" id="details">
+            <div class="d-row"><span>Status</span><b>Ren 1.0 sunset in December 2022</b></div>
+            <div class="d-row"><span>Core network</span><b>RenVM</b></div>
+            <div class="d-row"><span>Flagship asset</span><b>renBTC on Ethereum</b></div>
+            <div class="d-row"><span>REN supply</span><b>1 billion maximum</b></div>
+          </div>
+          <a class="cta" href="dashboard/" target="_blank" rel="noopener noreferrer">Open app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          
+      </div>
+      <div class="hero-chips">
+        <a class="hchip" href="https://www.coingecko.com/en/coins/ren" target="_blank" rel="noopener noreferrer">REN price <b id="sig0">—</b> <span class="ext" aria-hidden="true">↗</span></a>
+          <a class="hchip" href="https://www.coingecko.com/en/coins/renbtc" target="_blank" rel="noopener noreferrer">renBTC price <b id="sig1">—</b> <span class="ext" aria-hidden="true">↗</span></a>
+          <a class="hchip" href="https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93" target="_blank" rel="noopener noreferrer">Network <b>Ren 1.0 sunset</b> <span class="ext" aria-hidden="true">↗</span></a>
+      </div>
+    </main>
+  </div>
+  </div>
 
   <script>
-  (function(){"use strict";var b=document.querySelector("[data-switch]");if(!b)return;b.addEventListener("click",function(){var p=document.querySelectorAll(".card .tokpill");if(p.length<2)return;var t=p[0].innerHTML;p[0].innerHTML=p[1].innerHTML;p[1].innerHTML=t;});}());
+  (function(){
+    "use strict";
+    var $=function(id){ return document.getElementById(id); };
+    var root=document.documentElement, tl=$("theme-light"), td=$("theme-dark");
+    function applyTheme(t){ if(t==="dark"){ root.setAttribute("data-theme","dark"); } else { root.removeAttribute("data-theme"); } if(tl) tl.setAttribute("aria-pressed", String(t!=="dark")); if(td) td.setAttribute("aria-pressed", String(t==="dark")); }
+    var saved=null; try{ saved=localStorage.getItem("renbridge-theme"); }catch(e){}
+    if(saved) applyTheme(saved);
+    function setTheme(t){ applyTheme(t); try{ localStorage.setItem("renbridge-theme", t); }catch(e){} }
+    if(tl) tl.addEventListener("click", function(){ setTheme("light"); });
+    if(td) td.addEventListener("click", function(){ setTheme("dark"); });
+    var body=document.body, hamb=$("hamb"), scrim=$("scrim"), drawer=$("drawer"), dclose=$("drawer-close");
+    function openD(){ body.classList.add("drawer-open"); hamb.setAttribute("aria-expanded","true"); drawer.setAttribute("aria-hidden","false"); }
+    function closeD(){ body.classList.remove("drawer-open"); hamb.setAttribute("aria-expanded","false"); drawer.setAttribute("aria-hidden","true"); }
+    if(hamb) hamb.addEventListener("click", function(){ body.classList.contains("drawer-open")?closeD():openD(); });
+    if(scrim) scrim.addEventListener("click", closeD);
+    if(dclose) dclose.addEventListener("click", closeD);
+    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && body.classList.contains("drawer-open")) closeD(); });
+    if(drawer) drawer.addEventListener("click", function(e){ if(e.target.closest("a")) closeD(); });
+    var reversed=false;
+    var TOK={ A:{img:"btc.png",name:"BTC",sub:"on BTC",alt:"BTC logo"}, B:{img:"ren.png",name:"REN",sub:"on REN",alt:"REN logo"} };
+    var chev='<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+    function pill(role,k){ var n=TOK[k]; return '<img src="'+n.img+'" alt="'+n.alt+'" width="26" height="26"><span class="token-meta"><small>'+role+'</small><b>'+n.name+'</b></span>'+chev; }
+    function render(){ var a=reversed?"B":"A", b=reversed?"A":"B"; $("pill-from").innerHTML=pill("From",a); $("pill-to").innerHTML=pill("To",b); $("sub-from").textContent=TOK[a].sub; $("sub-to").textContent=TOK[b].sub; }
+    var rev=$("reverse"); if(rev) rev.addEventListener("click", function(){ reversed=!reversed; render(); });
+    var db=$("details-btn"), dp=$("details");
+    if(db&&dp) db.addEventListener("click", function(){ var open=dp.classList.toggle("open"); db.setAttribute("aria-expanded", String(open)); db.firstChild.textContent = open?"Hide details ":"Show details "; });
+    function money(n){ if(n>=1e9) return "$"+(n/1e9).toFixed(2)+"B"; if(n>=1e6) return "$"+(n/1e6).toFixed(1)+"M"; if(n>=1e3) return "$"+(n/1e3).toFixed(0)+"K"; return "$"+n.toFixed(0); }
+    function gwei(g){ return (g>=0.1?g.toFixed(2):(g>=0.001?g.toFixed(3):Number(g.toPrecision(2)).toString()))+" gwei"; }
+    function grab(url,opt){ var c="AbortController" in window ? new AbortController():null, t=c?setTimeout(function(){c.abort();},7000):null; var o=opt||{}; if(c) o.signal=c.signal; return fetch(url,o).then(function(r){ if(!r.ok) throw 0; return r.json(); }).finally(function(){ if(t) clearTimeout(t); }); }
+    grab("https://coins.llama.fi/prices/current/coingecko:ren").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:ren"], v=c&&Number(c.price); if(isFinite(v)&&v>0) $("sig0").textContent="$"+v.toLocaleString("en-US",{maximumFractionDigits:4}); }).catch(function(){});
+    grab("https://coins.llama.fi/prices/current/coingecko:renbtc").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:renbtc"], v=c&&Number(c.price); if(isFinite(v)&&v>0){ var s=v>=1000?Math.round(v).toLocaleString("en-US"):(v>=1?v.toFixed(2):(v>=0.01?v.toFixed(4):Number(v.toPrecision(2)).toString())); $("sig1").textContent="$"+s; } }).catch(function(){});
+  })();
   </script>
 </body>
 </html>
