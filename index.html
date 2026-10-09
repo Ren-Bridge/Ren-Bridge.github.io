@@ -3,308 +3,265 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ren Bridge — Bitcoin cross-chain bridge</title>
-  <meta name="description" content="Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta name="theme-color" content="#eef0f3">
+  <title>Ren Bridge — Bring Bitcoin into Ethereum DeFi as renBTC</title>
+  <meta name="description" content="The Ren Bridge mints renBTC, a 1:1 representation of Bitcoin, onto Ethereum through RenVM's darknode network. See how the mint-and-burn mechanism works, what it costs, and how to move BTC in and out safely.">
   <link rel="canonical" href="https://ren-bridge.github.io/">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="prefetch" href="dashboard/index.html">
-  <link rel="preconnect" href="https://defillama.com/" crossorigin>
-  <link rel="preconnect" href="https://coins.llama.fi" crossorigin>
-  <meta property="og:type" content="website"><meta property="og:url" content="https://ren-bridge.github.io/">
-  <meta property="og:title" content="Ren Bridge — Bitcoin cross-chain bridge">
-  <meta property="og:description" content="Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20">
-  <meta property="og:site_name" content="Ren Bridge dashboard"><meta property="og:image" content="https://ren-bridge.github.io/og-cover.png">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ren Bridge — Bitcoin cross-chain bridge"><meta name="twitter:description" content="Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20"><meta name="twitter:image" content="https://ren-bridge.github.io/og-cover.png">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {"@type":"WebSite","@id":"https://ren-bridge.github.io/#website","url":"https://ren-bridge.github.io/","name":"Ren Bridge dashboard","inLanguage":"en-US"},
-      {"@type":"Thing","@id":"https://ren-bridge.github.io/#brand","name":"Ren Bridge",
-       "description":"Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 2022.",
-       "sameAs":["https://renprotocol.org/", "https://github.com/renproject", "https://x.com/renprotocol", "https://medium.com/renprotocol"]},
-      {"@type":"WebApplication","@id":"https://ren-bridge.github.io/#widget","name":"Ren Bridge preview","applicationCategory":"FinanceApplication","operatingSystem":"Any","url":"https://ren-bridge.github.io/#route-preview","isPartOf":{"@id":"https://ren-bridge.github.io/#webpage"},"featureList":["Preview the route","Reverse the direction","Open the app"]},
-      {"@type":"WebPage","@id":"https://ren-bridge.github.io/#webpage","url":"https://ren-bridge.github.io/","name":"Ren Bridge \u2014 Bitcoin cross-chain bridge","description":"Ren Bridge was the Ren Protocol interface for minting and redeeming cross-chain assets such as renBTC through RenVM; Ren 1.0 was sunset in December 20","isPartOf":{"@id":"https://ren-bridge.github.io/#website"},"about":{"@id":"https://ren-bridge.github.io/#brand"},"mainEntity":{"@id":"https://ren-bridge.github.io/#brand"},"inLanguage":"en-US","mentions":[{"@type":"Thing","name":"RenVM","sameAs":"https://github.com/renproject/ren/wiki"},{"@type":"Thing","name":"renBTC","sameAs":"https://etherscan.io/token/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d"}]},
-      {"@type":"ItemList","@id":"https://ren-bridge.github.io/#resources","name":"Ren Bridge \u2014 resources & references","itemListElement":[{"@type":"ListItem","position":1,"name":"Ren Foundation","url":"https://renprotocol.org/"},{"@type":"ListItem","position":2,"name":"RenVM Wiki","url":"https://github.com/renproject/ren/wiki"},{"@type":"ListItem","position":3,"name":"Ren Client Docs","url":"https://renproject.github.io/ren-client-docs/"},{"@type":"ListItem","position":4,"name":"RenVM Deep Dive","url":"https://coinmarketcap.com/academy/article/bringing-bitcoin-to-defi-a-complete-beginners-deep-dive-into-renvm"},{"@type":"ListItem","position":5,"name":"Ren Brand Hub","url":"https://renproject.github.io/ren-client-docs/ren-js/brand-hub"},{"@type":"ListItem","position":6,"name":"REN on CoinGecko","url":"https://www.coingecko.com/en/coins/ren"},{"@type":"ListItem","position":7,"name":"renBTC on CoinGecko","url":"https://www.coingecko.com/en/coins/renbtc"},{"@type":"ListItem","position":8,"name":"REN on DeFiLlama","url":"https://defillama.com/token/REN"},{"@type":"ListItem","position":9,"name":"renBTC on Etherscan","url":"https://etherscan.io/token/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d"},{"@type":"ListItem","position":10,"name":"renBTC on CoinMarketCap","url":"https://coinmarketcap.com/currencies/renbtc/"},{"@type":"ListItem","position":11,"name":"RenJS Documentation","url":"https://renproject.github.io/ren-client-docs/ren-js"},{"@type":"ListItem","position":12,"name":"RenJS v3 Introduction","url":"https://renproject.github.io/ren-client-docs/ren-js/v3/introduction"},{"@type":"ListItem","position":13,"name":"RenJS Bridge Tutorial","url":"https://renproject.github.io/ren-client-docs/ren-js/tutorial/ren-js"},{"@type":"ListItem","position":14,"name":"Contract Summary","url":"https://renproject.github.io/ren-client-docs/contracts/summary"},{"@type":"ListItem","position":15,"name":"RenJS Source Repository","url":"https://github.com/renproject/ren-js"},{"@type":"ListItem","position":16,"name":"Ren 1.0 Sunset Notice","url":"https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93"},{"@type":"ListItem","position":17,"name":"RenVM Audit Index","url":"https://github.com/renproject/ren/wiki/Audits"},{"@type":"ListItem","position":18,"name":"Trail of Bits Review","url":"https://github.com/trailofbits/publications/blob/master/reviews/renvm.pdf"},{"@type":"ListItem","position":19,"name":"RenVM UX Warnings","url":"https://renproject.github.io/ren-client-docs/ren-js/best-practices/ui-best-practices"},{"@type":"ListItem","position":20,"name":"Proof of Reserve","url":"https://renproject.github.io/ren-client-docs/contracts/proof-of-reserve"}]}
-    ]
-  }
-  </script>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ren Bridge">
+  <meta property="og:description" content="The Ren Bridge mints renBTC, a 1:1 representation of Bitcoin, onto Ethereum through RenVM's darknode network. See how the mint-and-burn mechanism works, what it costs, and how to move BTC in and out safely.">
+  <meta property="og:url" content="https://ren-bridge.github.io/">
+  <meta property="og:image" content="https://ren-bridge.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ren Bridge">
+  <meta name="twitter:description" content="The Ren Bridge mints renBTC, a 1:1 representation of Bitcoin, onto Ethereum through RenVM's darknode network. See how the mint-and-burn mechanism works, what it costs, and how to move BTC in and out safely.">
+  <meta name="twitter:image" content="https://ren-bridge.github.io/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Albert+Sans:wght@500;600;700&display=swap">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://ren-bridge.github.io/#website", "url": "https://ren-bridge.github.io/", "name": "Ren Bridge — Bring Bitcoin into Ethereum DeFi as renBTC"}, {"@type": "WebPage", "@id": "https://ren-bridge.github.io/#webpage", "url": "https://ren-bridge.github.io/", "name": "Ren Bridge — Bring Bitcoin into Ethereum DeFi as renBTC", "isPartOf": {"@id": "https://ren-bridge.github.io/#website"}, "description": "The Ren Bridge mints renBTC, a 1:1 representation of Bitcoin, onto Ethereum through RenVM's darknode network. See how the mint-and-burn mechanism works, what it costs, and how to move BTC in and out safely.", "datePublished": "2026-10-09", "dateModified": "2026-10-09"}, {"@type": "SoftwareApplication", "name": "Ren Bridge", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ren-bridge.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Bridges"}, {"@type": "ListItem", "position": 3, "name": "Ren Bridge"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a Ren Bridge?", "acceptedAnswer": {"@type": "Answer", "text": "A Ren Bridge is the route that converts native Bitcoin into renBTC, a 1:1-pegged ERC-20 token minted by the RenVM darknode network so Bitcoin value can move through Ethereum DeFi."}}, {"@type": "Question", "name": "How does RenVM mint renBTC without a central custodian?", "acceptedAnswer": {"@type": "Answer", "text": "Darknodes each hold a share of the signing key generated through multi-party computation. A threshold of them must cooperate to sign a mint or release, so no single operator can move the underlying Bitcoin alone."}}, {"@type": "Question", "name": "How long does minting renBTC take?", "acceptedAnswer": {"@type": "Answer", "text": "A mint waits for your Bitcoin deposit to reach the required confirmations, typically around six, which usually takes about an hour. Burning back to native Bitcoin is often faster once the Ethereum transaction clears."}}, {"@type": "Question", "name": "What does a transfer cost?", "acceptedAnswer": {"@type": "Answer", "text": "You pay the Bitcoin network fee on the deposit, Ethereum gas once renBTC is in your wallet, and a small RenVM protocol fee taken from the minted or released amount."}}, {"@type": "Question", "name": "Is renBTC the same as Bitcoin?", "acceptedAnswer": {"@type": "Answer", "text": "renBTC tracks Bitcoin's price 1:1 and can be burned to redeem native BTC, but it is an ERC-20 token living on Ethereum, not Bitcoin itself, so it uses Ethereum gas and Ethereum smart contracts while held."}}, {"@type": "Question", "name": "How is this different from WBTC?", "acceptedAnswer": {"@type": "Answer", "text": "WBTC is minted by a small set of licensed custodians holding Bitcoin directly. RenVM mints renBTC through a distributed darknode network instead, spreading custody across many independent node operators rather than a few custodians."}}, {"@type": "Question", "name": "Can I always convert renBTC back to native Bitcoin?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Burning renBTC on Ethereum and naming a Bitcoin address triggers the darknode network to release native BTC to that address, reversing the original mint at any time."}}]}]}</script>
   <style>
-:root{
-  --bg:#eef0f3; --bg-2:#e7eaef; --panel:#ffffff; --field:#f1f3f7; --field-2:#e9edf2;
-  --ink:#151a21; --text:#414954; --muted:#6a727d; --faint:#9aa2ad;
-  --line:rgba(20,26,33,.09); --line-2:rgba(20,26,33,.14);
-  --accent:#00A2A6; --accent-ink:#004346; --accent-soft:rgba(0,162,166,0.13); --accent-glow:rgba(0,162,166,0.3);
-  --cta:#171a20; --cta-hover:#0a0c10; --cta-ink:#ffffff;
-  --shadow-card:0 1px 0 rgba(20,26,33,.02), 0 40px 80px -42px rgba(24,32,48,.40), 0 14px 30px -22px rgba(24,32,48,.24);
-  --shadow-pop:0 24px 60px -26px rgba(24,32,48,.38), 0 8px 20px -12px rgba(24,32,48,.22);
-  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-  --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --ease: cubic-bezier(0.22, 0.7, 0.24, 1);
-  color-scheme: light;
-}
-html[data-theme="dark"]{
-  --bg:#0b0e13; --bg-2:#0e131b; --panel:#141a24; --field:#1b2230; --field-2:#232c3d;
-  --ink:#e9eef7; --text:#bcc5d6; --muted:#8b95a8; --faint:#606a7e;
-  --line:rgba(226,234,250,.10); --line-2:rgba(226,234,250,.18);
-  --accent:#47bcbe; --accent-ink:#7fd0d2; --accent-soft:rgba(71,188,190,0.16); --accent-glow:rgba(71,188,190,0.34);
-  --cta:#47bcbe; --cta-hover:#3da1a3; --cta-ink:#12161c;
-  --shadow-card:0 30px 70px -34px rgba(0,0,0,.66), 0 6px 18px -10px rgba(0,0,0,.5);
-  --shadow-pop:0 24px 60px -26px rgba(0,0,0,.7);
-  color-scheme: dark;
-}
-*{ box-sizing:border-box; }
-html{ height:100%; scroll-behavior:smooth; }
-@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
-body{ margin:0; min-width:320px; height:100%; overflow:hidden; color:var(--text); background:var(--bg); font-family:var(--font); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-a{ color:inherit; text-decoration:none; }
-button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
-img{ display:block; max-width:100%; }
-h1,h2,h3,p{ margin:0; }
-a:focus-visible, button:focus-visible, summary:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:10px; }
-.skip{ position:absolute; left:-999px; }
-.skip:focus{ left:12px; top:12px; z-index:120; padding:9px 15px; border-radius:10px; background:var(--cta); color:var(--cta-ink); font-weight:750; }
-.bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; background:
-  radial-gradient(1100px 700px at 82% 116%, var(--bg-2), transparent 60%),
-  radial-gradient(900px 620px at -6% -8%, var(--bg-2), transparent 58%); }
-.bg::before{ content:""; position:absolute; right:-14%; bottom:-30%; width:min(92vw,940px); aspect-ratio:1; border-radius:50%;
-  background:repeating-radial-gradient(circle at center, transparent 0 86px, var(--line) 86px 87px); opacity:.5; mask:radial-gradient(circle at center, #000 62%, transparent 72%); }
-.bg::after{ content:""; position:absolute; left:-10%; top:-16%; width:min(70vw,560px); aspect-ratio:1; border-radius:50%;
-  background:repeating-radial-gradient(circle at center, transparent 0 64px, var(--line) 64px 65px); opacity:.4; mask:radial-gradient(circle at center, #000 60%, transparent 72%); }
-.topbar{ position:relative; z-index:70; flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; gap:14px; padding:13px clamp(16px,3.4vw,34px);
-  background:color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter:saturate(140%) blur(12px); -webkit-backdrop-filter:saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
-.tb-left{ display:flex; align-items:center; gap:12px; min-width:0; }
-.hamb{ display:grid; place-items:center; width:40px; height:40px; flex:0 0 auto; position:relative; border:1px solid var(--line-2); border-radius:12px; background:var(--panel); color:var(--ink); transition:border-color .15s var(--ease); }
-.hamb:hover{ border-color:var(--accent); }
-.hamb .bar{ position:absolute; left:11px; right:11px; height:2px; border-radius:2px; background:currentColor; transition:transform .24s var(--ease), opacity .18s var(--ease); }
-.hamb .bar:nth-child(1){ top:14px; } .hamb .bar:nth-child(2){ top:19px; } .hamb .bar:nth-child(3){ top:24px; }
-body.drawer-open .hamb .bar:nth-child(1){ transform:translateY(5px) rotate(45deg); }
-body.drawer-open .hamb .bar:nth-child(2){ opacity:0; }
-body.drawer-open .hamb .bar:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
-.brand{ display:flex; align-items:center; gap:11px; min-width:0; }
-.brand-logo{ width:34px; height:34px; flex:0 0 auto; display:grid; place-items:center; border-radius:10px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line-2); }
-.brand-logo img{ width:22px; height:22px; border-radius:50%; }
-.brand-name{ font-size:19px; font-weight:820; letter-spacing:-0.03em; color:var(--ink); line-height:1.1; white-space:nowrap; }
-.tb-right{ display:flex; align-items:center; gap:9px; }
-.theme-toggle{ display:inline-flex; align-items:center; gap:2px; padding:3px; border-radius:999px; background:var(--field); box-shadow:inset 0 0 0 1px var(--line); }
-.theme-toggle button{ display:grid; place-items:center; width:30px; height:30px; border-radius:999px; color:var(--muted); transition:color .15s var(--ease), background-color .15s var(--ease); }
-.theme-toggle button svg{ width:15px; height:15px; }
-.theme-toggle button[aria-pressed="true"]{ color:var(--ink); background:var(--panel); box-shadow:0 2px 8px -3px rgba(0,0,0,.28); }
-.btn-app{ display:inline-flex; align-items:center; gap:8px; padding:9px 15px; border-radius:11px; background:var(--panel); color:var(--ink); font-size:13.5px; font-weight:700; letter-spacing:-0.01em; box-shadow:inset 0 0 0 1px var(--line-2); transition:box-shadow .15s var(--ease), transform .15s var(--ease); white-space:nowrap; }
-.btn-app svg{ width:16px; height:16px; color:var(--muted); }
-.btn-app:hover{ box-shadow:inset 0 0 0 1px var(--accent); transform:translateY(-1px); }
-.btn-app:hover svg{ color:var(--accent-ink); }
-.scrim{ position:fixed; inset:0; z-index:80; background:rgba(10,14,17,.42); opacity:0; visibility:hidden; transition:opacity .28s var(--ease), visibility .28s var(--ease); }
-body.drawer-open .scrim{ opacity:1; visibility:visible; }
-.drawer{ position:fixed; z-index:90; top:0; left:0; height:100dvh; width:300px; max-width:86vw; display:flex; flex-direction:column; padding:16px 14px 16px; background:var(--panel); border-right:1px solid var(--line); box-shadow:var(--shadow-pop);
-  transform:translateX(-104%); transition:transform .3s var(--ease); overflow-y:auto; }
-body.drawer-open .drawer{ transform:translateX(0); }
-.drawer-head{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 6px 8px; }
-.drawer-head .brand-name{ font-size:15px; }
-.drawer-close{ display:grid; place-items:center; width:34px; height:34px; border-radius:10px; color:var(--muted); }
-.drawer-close:hover{ color:var(--ink); background:var(--field); }
-.drawer-close svg{ width:17px; height:17px; }
-.nav-label{ margin:15px 12px 6px; font-size:10px; font-weight:750; letter-spacing:0.15em; text-transform:uppercase; color:var(--faint); }
-.nav-item{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-item .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
-.nav-item.is-active{ color:var(--accent-ink); background:var(--accent-soft); }
-.nav-item.is-active .ni-ico{ color:var(--accent-ink); }
-.nav-item:hover{ color:var(--ink); background:var(--field); }
-.nav-group{ border-radius:10px; }
-.nav-group summary{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; cursor:pointer; list-style:none; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-group summary::-webkit-details-marker{ display:none; }
-.nav-group summary .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
-.nav-group summary .chev{ width:15px; height:15px; margin-left:auto; color:var(--faint); transition:transform .2s var(--ease); }
-.nav-group summary:hover{ color:var(--ink); background:var(--field); }
-.nav-group[open] summary{ color:var(--ink); }
-.nav-group[open] summary .chev{ transform:rotate(180deg); }
-.nav-sub{ display:flex; flex-direction:column; gap:1px; padding:2px 0 8px 42px; }
-.nav-sub a{ display:flex; align-items:baseline; gap:7px; padding:6px 10px; border-radius:8px; color:var(--muted); font-size:12.5px; font-weight:550; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-sub a small{ color:var(--faint); font-size:10.5px; font-weight:500; }
-.nav-sub a:hover{ color:var(--accent-ink); background:var(--field); }
-.drawer-foot{ margin-top:auto; padding-top:13px; border-top:1px solid var(--line); }
-.disclose{ margin:8px 8px 0; font-size:11px; line-height:1.5; color:var(--muted); }
-.disclose strong{ color:var(--text); font-weight:750; }
-.fine{ margin:6px 8px 0; font-size:10.5px; line-height:1.45; color:var(--faint); }
-.app{ height:100dvh; display:flex; flex-direction:column; overflow:hidden; position:relative; z-index:1; }
-.wrap{ flex:1 1 auto; min-height:0; display:grid; place-items:center; overflow:hidden; }
-.stage{ width:100%; max-width:560px; max-height:100%; margin-inline:auto; padding:clamp(14px,3vh,36px) clamp(16px,3.4vw,26px); display:flex; flex-direction:column; align-items:center; text-align:center; }
-.lead{ margin:0 0 clamp(13px,2.2vh,20px); max-width:24ch; font-size:clamp(19px,2.5vw,27px); line-height:1.16; letter-spacing:-0.025em; font-weight:750; color:var(--ink); }
-.lead .hl{ color:var(--accent-ink); }
-.hero-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:clamp(13px,2.2vh,18px); }
-.hchip{ display:inline-flex; align-items:baseline; gap:7px; padding:8px 13px; border-radius:12px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line); font-size:12px; font-weight:600; color:var(--muted); transition:box-shadow .15s var(--ease), color .15s var(--ease); }
-.hchip b{ color:var(--ink); font-family:var(--mono); font-size:12.5px; font-weight:650; font-variant-numeric:tabular-nums; }
-.hchip .ext{ color:var(--faint); font-size:10px; }
-a.hchip:hover{ box-shadow:inset 0 0 0 1px var(--accent); color:var(--text); }
-a.hchip:hover .ext{ color:var(--accent-ink); }
-.swap-card{ position:relative; width:min(480px,100%); border-radius:28px; background:var(--panel); padding:clamp(20px,4vw,30px); text-align:left; box-shadow:var(--shadow-card); }
-.card-head{ display:flex; align-items:center; justify-content:space-between; margin:2px 4px 17px; }
-.card-title{ font-size:15px; font-weight:800; letter-spacing:-0.02em; color:var(--ink); }
-.badge{ display:inline-flex; align-items:center; gap:6px; padding:5px 11px; border-radius:999px; color:var(--accent-ink); background:var(--accent-soft); font-size:10px; font-weight:750; letter-spacing:0.07em; text-transform:uppercase; }
-.badge i{ width:6px; height:6px; border-radius:50%; background:var(--accent); }
-.field{ position:relative; padding:17px 18px 18px; border-radius:19px; background:var(--field); }
-.field + .field{ margin-top:6px; }
-.field-top{ display:flex; align-items:center; justify-content:space-between; }
-.field-label{ font-size:12px; font-weight:600; color:var(--muted); }
-.field-bal{ font-size:11px; font-weight:600; color:var(--faint); }
-.field-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:11px; min-width:0; }
-.amount{ min-width:0; }
-.amount b{ display:block; font-size:clamp(29px,5vw,38px); font-weight:750; line-height:1; letter-spacing:-0.02em; color:var(--ink); font-variant-numeric:tabular-nums; }
-.amount span{ display:block; margin-top:6px; font-size:11px; font-weight:600; color:var(--faint); }
-.token-pill{ display:inline-flex; align-items:center; gap:10px; flex:0 0 auto; padding:7px 12px 7px 8px; border-radius:999px; background:var(--panel); box-shadow:0 4px 14px -8px rgba(0,0,0,.4), inset 0 0 0 1px var(--line); transition:box-shadow .15s var(--ease); }
-.token-pill:hover{ box-shadow:0 6px 18px -8px rgba(0,0,0,.42), inset 0 0 0 1px var(--line-2); }
-.token-pill img{ width:26px; height:26px; flex:0 0 auto; border-radius:50%; }
-.token-meta{ display:flex; flex-direction:column; line-height:1.05; min-width:0; }
-.token-meta small{ font-size:9.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); }
-.token-meta b{ font-size:15px; font-weight:800; letter-spacing:-0.01em; color:var(--ink); white-space:nowrap; }
-.token-pill .chev{ width:14px; height:14px; flex:0 0 auto; color:var(--faint); }
-.reverse{ position:relative; z-index:2; display:grid; place-items:center; width:40px; height:40px; margin:-14px auto; border:4px solid var(--panel); border-radius:13px; background:var(--field-2); color:var(--muted); box-shadow:0 6px 16px -8px rgba(0,0,0,.4); transition:transform .28s var(--ease), color .15s var(--ease), background-color .15s var(--ease); }
-.reverse svg{ width:16px; height:16px; }
-.reverse:hover{ color:var(--cta-ink); background:var(--accent); transform:rotate(180deg); }
-.details-btn{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:12px; padding:12px; border-radius:14px; background:var(--field); color:var(--muted); font-size:12px; font-weight:750; letter-spacing:0.06em; text-transform:uppercase; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.details-btn svg{ width:14px; height:14px; transition:transform .2s var(--ease); }
-.details-btn:hover{ color:var(--ink); }
-.details-btn[aria-expanded="true"] svg{ transform:rotate(180deg); }
-.details{ overflow:hidden; max-height:0; opacity:0; transition:max-height .3s var(--ease), opacity .22s var(--ease), margin .3s var(--ease); }
-.details.open{ max-height:280px; opacity:1; margin-top:6px; }
-.d-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 8px; border-bottom:1px solid var(--line); }
-.d-row:last-child{ border-bottom:0; }
-.d-row span{ font-size:12.5px; font-weight:600; color:var(--muted); }
-.d-row b{ font-size:12.5px; font-weight:700; color:var(--text); }
-.d-row b.ok{ color:var(--accent-ink); }
-.d-row b.mono{ font-family:var(--mono); font-size:11px; }
-.cta{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; padding:16px; border-radius:16px; background:var(--cta); color:var(--cta-ink); font-size:15px; font-weight:800; letter-spacing:0.03em; text-transform:uppercase; box-shadow:0 16px 34px -16px rgba(0,0,0,.5); transition:background-color .15s var(--ease), transform .15s var(--ease); }
-.cta svg{ width:16px; height:16px; }
-.cta:hover{ background:var(--cta-hover); transform:translateY(-1px); }
-.card-note{ margin:13px 4px 0; font-size:11px; line-height:1.5; color:var(--faint); text-align:center; }
-.card-note a{ color:var(--muted); text-decoration:underline; text-decoration-color:var(--line-2); text-underline-offset:2px; }
-.card-note a:hover{ color:var(--accent-ink); }
-@media (max-width:560px){
-  .brand-name{ font-size:16px; } .btn-app span{ display:none; } .btn-app{ padding:9px 11px; }
-  .stage{ padding:12px 16px; }
-  .lead{ font-size:clamp(18px,5.5vw,24px); margin-bottom:14px; }
-  .swap-card{ padding:18px; } .field{ padding:14px 15px 15px; } .amount b{ font-size:29px; }
-  .hero-chips{ margin-top:12px; }
-}
-@media (max-height:700px){ .lead{ font-size:clamp(17px,4.5vw,21px); margin-bottom:10px; } .hero-chips{ display:none; } }
-@media (max-height:600px){ .field{ padding:12px 15px 13px; } .amount b{ font-size:26px; } .details-btn{ margin-top:8px; padding:9px; } .cta{ padding:14px; margin-top:8px; } }
-@media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+    :root{--bg:#120C0D;--surface:#1D1416;--text:#F3EAEC;--muted:#A3888C;--accent:#FB7185;--accent-ink:#20080C;--radius:12px;--display:"Albert Sans";--body:"Albert Sans"}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 1rem/1.7 var(--body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: .12em; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    ::selection { background: var(--accent); color: var(--accent-ink); }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--display); line-height: 1.15; text-wrap: balance; }
+    p, h1, h2, h3 { margin-top: 0; }
+    img, svg { max-width: 100%; vertical-align: middle; }
+    .c13531c { width: min(1180px, calc(100% - 3rem)); margin-inline: auto; }
+    .c8511e5 { position: absolute; z-index: 5; top: .5rem; left: 1rem; padding: .7rem 1rem; background: var(--surface); transform: translateY(-180%); border-radius: var(--radius); }
+    .c8511e5:focus { transform: translateY(0); }
+    .cece6eb { border-bottom: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
+    .c69a14c { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+    .c0116fd { display: inline-flex; align-items: center; gap: .7rem; color: var(--text); font: 650 1.12rem/1.2 var(--display); text-decoration: none; }
+    .c2c182a { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: calc(var(--radius) * .6); background: var(--accent); color: var(--accent-ink); }
+    .c805cdb { width: 1.2rem; height: 1.2rem; fill: none; stroke: var(--accent-ink); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+    .c9e7745 { display: flex; align-items: center; gap: 1.8rem; }
+    .c9e7745 > a { font-size: .88rem; font-weight: 600; text-decoration: none; }
+    .c9e7745 > a:not(.c604e9c) { color: var(--muted); }
+    .c604e9c { display: inline-flex; align-items: center; justify-content: center; gap: .8rem; min-height: 52px; padding: .85rem 1.4rem; border: 1px solid color-mix(in srgb,var(--accent-ink) 12%,transparent); border-radius: var(--radius); background: linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 88%,var(--text))); color: var(--accent-ink); font: 650 .95rem/1.3 var(--body); text-decoration: none; box-shadow: 0 6px 18px color-mix(in srgb,var(--accent) 17%,transparent); transition: transform .18s ease, box-shadow .18s ease; }
+    .c604e9c:hover { transform: translateY(-2px); box-shadow: 0 9px 24px color-mix(in srgb,var(--accent) 25%,transparent); }
+    .c69a14c .c604e9c { min-height: 42px; padding: .65rem 1rem; }
+    .c1cbffa { padding-block: 1.8rem 0; color: var(--muted); font-size: .8rem; overflow-wrap: anywhere; }
+    .c042254 { color: var(--muted); }
+    .c042254 a, a.c042254 { color: var(--muted); text-decoration: none; }
+    .c042254 a:hover, a.c042254:hover { color: var(--accent); text-decoration: underline; }
+    .c042254 ol, .c042254 ul { display: flex; flex-wrap: wrap; gap: .5rem 1rem; padding: 0; margin: 0; list-style: none; }
+    .c803714 { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: clamp(2rem,6vw,5.5rem); align-items: center; padding-block: 3rem 5.5rem; }
+    .c704ecc { display: inline-flex; align-items: center; gap: .55rem; margin-bottom: 1.3rem; color: var(--accent); font-size: .86rem; font-weight: 600; }
+    .c704ecc::before { content: ""; width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb,var(--accent) 9%,transparent); }
+    h1 { margin-bottom: 1.4rem; font-size: clamp(2.5rem,4.7vw,4.35rem); font-weight: 600; letter-spacing: -.055em; overflow-wrap: anywhere; }
+    h1 em { color: var(--accent); font-style: normal; }
+    .c437615 { max-width: 48ch; margin-bottom: 2rem; color: var(--muted); font-size: 1.08rem; line-height: 1.8; }
+    .cd3fe62 { position: relative; min-width: 0; padding: clamp(1.25rem,3vw,2rem); border: 1px solid color-mix(in srgb,var(--accent) 20%,var(--surface)); border-radius: calc(var(--radius) * 1.6); background: linear-gradient(155deg,color-mix(in srgb,var(--accent) 7%,var(--surface)),var(--surface) 40%); box-shadow: 0 24px 64px color-mix(in srgb,var(--text) 9%,transparent),0 4px 12px color-mix(in srgb,var(--accent) 6%,transparent); }
+    .ce0a391 { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .7rem; margin-bottom: 1.6rem; }
+    .ce0a391 h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.035em; }
+    .cc73b1a { display: inline-flex; align-items: center; gap: .4rem; padding: .3rem .65rem; border: 1px solid color-mix(in srgb,var(--accent) 16%,transparent); border-radius: 999px; background: color-mix(in srgb,var(--accent) 8%,var(--surface)); color: var(--accent); font-size: .72rem; font-weight: 600; }
+    .cc73b1a::before { content: ""; width: .35rem; height: .35rem; border-radius: 50%; background: var(--accent); }
+    .cc0df88 { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: .8rem; padding: 1rem; margin-bottom: 1.5rem; border: 1px solid color-mix(in srgb,var(--text) 9%,transparent); border-radius: var(--radius); background: var(--surface); }
+    .c22b063 { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; }
+    .c22b063:last-child { align-items: flex-end; }
+    .ce3c178, .c8a6517 { color: var(--muted); font-size: .78rem; font-weight: 500; }
+    .ce378fa { display: flex; align-items: center; min-height: 36px; max-width: 100%; overflow-wrap: anywhere; font: 600 1rem/1.3 var(--display); }
+    .ce378fa img, .ce378fa svg { max-height: 36px; width: auto; max-width: 100%; object-fit: contain; }
+    .c818720 { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: color-mix(in srgb,var(--accent) 9%,var(--surface)); }
+    .c818720 .c805cdb { stroke: var(--accent); }
+    .c8a6517 { display: block; margin-bottom: .5rem; color: var(--text); }
+    .c966e8b { display: flex; align-items: center; gap: .75rem; padding: .8rem 1rem; border: 1px solid color-mix(in srgb,var(--text) 18%,transparent); border-radius: var(--radius); background: var(--bg); transition: border-color .18s ease; }
+    .c966e8b:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb,var(--accent) 12%,transparent); }
+    .c966e8b input { width: 100%; min-width: 0; padding: .2rem 0; border: 0; background: var(--bg); color: var(--text); font: 550 1.9rem/1.2 var(--display); font-variant-numeric: tabular-nums; }
+    .c966e8b input:focus { outline: 0; }
+    .c504534 { color: var(--muted); font-size: .8rem; }
+    .cd096e5 { margin: .55rem 0 1.3rem; color: var(--muted); font-size: .74rem; }
+    .c850429 { margin: .5rem 0; color: var(--text); font-size: .8rem; font-weight: 600; }
+    [hidden] { display: none !important; }
+    .cda49a1 { padding: 1.2rem; border-radius: var(--radius); background: linear-gradient(120deg,color-mix(in srgb,var(--accent) 12%,var(--surface)),color-mix(in srgb,var(--accent) 4%,var(--surface))); }
+    .c2ed6d8 { margin-bottom: .25rem; color: var(--muted); font-size: .8rem; }
+    .c19d320 { display: block; color: var(--text); font: 600 clamp(1.7rem,3vw,2.5rem)/1.3 var(--display); letter-spacing: -.04em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+    .c19d320 small { color: var(--muted); font: 400 .8rem/1.4 var(--body); letter-spacing: 0; }
+    .cda49a1 dl { display: grid; gap: .6rem; margin: 1rem 0 0; padding-top: 1rem; border-top: 1px solid color-mix(in srgb,var(--accent) 15%,transparent); font-size: .8rem; }
+    .cda49a1 dl div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; }
+    .cda49a1 dt { color: var(--muted); }
+    .cda49a1 dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .cf82a5c { margin-block: 1rem; color: var(--muted); font-size: .75rem; }
+    .cf82a5c summary { width: fit-content; color: var(--text); cursor: pointer; }
+    .cf82a5c p { margin: .65rem 0 0; }
+    .cd3fe62 > .c604e9c { width: 100%; }
+    .c517e50 { padding: 2rem; border: 1px solid color-mix(in srgb,var(--text) 10%,transparent); border-radius: calc(var(--radius) * 1.3); background: var(--surface); }
+    .ce30c0e { margin-bottom: 1.3rem; font-size: 1.65rem; font-weight: 550; letter-spacing: -.035em; }
+    .c5e9359 { max-width: 100%; overflow-x: auto; }
+    .c46568d { width: 100%; border-collapse: collapse; text-align: left; font-size: .92rem; }
+    .c46568d caption { padding-bottom: 1rem; text-align: left; color: var(--muted); }
+    .c46568d th, .c46568d td { padding: 1rem 1.1rem; border-bottom: 1px solid color-mix(in srgb,var(--text) 9%,transparent); vertical-align: top; overflow-wrap: anywhere; }
+    .c46568d th { color: var(--muted); font-weight: 500; }
+    .c46568d thead { background: color-mix(in srgb,var(--accent) 5%,var(--surface)); }
+    .c46568d tbody tr:last-child > * { border-bottom: 0; }
+    .c739058 { max-width: 820px; padding-block: 4rem 2rem; }
+    .c09cb38 { margin-bottom: 3.3rem; }
+    .c6be45a { margin: 0 0 1.1rem; font: 550 clamp(1.6rem,3vw,2.2rem)/1.2 var(--display); letter-spacing: -.035em; }
+    .c952a25 { color: var(--muted); line-height: 1.85; overflow-wrap: anywhere; }
+    .c952a25 p { margin-bottom: 1.2rem; }
+    .c952a25 strong, .c952a25 h3, .c952a25 h4 { color: var(--text); }
+    .c952a25 ul, .c952a25 ol { padding-left: 1.3rem; }
+    .c952a25 li { padding-left: .3rem; margin-block: .55rem; }
+    .c952a25 li::marker { color: var(--accent); }
+    .c952a25 blockquote { margin: 1.5rem 0; padding: 1rem 1.4rem; border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; background: var(--surface); color: var(--text); }
+    .c952a25 img { height: auto; border-radius: var(--radius); }
+    .c952a25 pre { overflow-x: auto; padding: 1rem; border-radius: var(--radius); background: var(--surface); }
+    .c952a25 code, .c952a25 pre { font-family: var(--body); }
+    .c130baa { margin-block: .8rem; border: 1px solid color-mix(in srgb,var(--text) 11%,transparent); border-radius: var(--radius); background: var(--surface); overflow: hidden; }
+    .cc1459a { position: relative; padding: 1.3rem 3.5rem 1.3rem 1.4rem; list-style: none; cursor: pointer; color: var(--text); font: 550 1.04rem/1.5 var(--display); }
+    .cc1459a::-webkit-details-marker { display: none; }
+    .cc1459a::after { content: "+"; position: absolute; right: 1.4rem; top: 1.2rem; color: var(--accent); font-size: 1.3rem; }
+    details[open] > .cc1459a::after { content: "−"; }
+    .c130baa[open] { border-color: color-mix(in srgb,var(--accent) 35%,var(--surface)); }
+    .cc1459a:focus-visible { outline-offset: -5px; }
+    .ce081d3 { padding: 0 1.4rem 1.4rem; color: var(--muted); overflow-wrap: anywhere; }
+    .ce081d3 > :last-child { margin-bottom: 0; }
+    .c98d7f6 { max-width: 820px; padding-block: 1.5rem 3.5rem; border-top: 1px solid color-mix(in srgb,var(--text) 12%,transparent); }
+    .c98d7f6 .ce30c0e { font-size: 1.25rem; }
+    .c8b915d { margin: 0; padding-left: 1.25rem; color: var(--muted); font-size: .88rem; }
+    .c25ca1f { padding-block: .4rem; padding-left: .25rem; overflow-wrap: anywhere; }
+    .c25ca1f a, a.c25ca1f { color: var(--text); text-decoration-color: color-mix(in srgb,var(--accent) 45%,transparent); }
+    .c25ca1f a:hover, a.c25ca1f:hover { color: var(--accent); }
+    .ca0f2a6 { border-top: 1px solid color-mix(in srgb,var(--text) 10%,transparent); }
+    .c0b1f84 { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; min-height: 96px; padding-block: 1.5rem; color: var(--muted); font-size: .8rem; }
+    .c0b1f84 p { margin: 0; }
+    .c0b1f84 a { color: var(--muted); }
+    @media (max-width: 850px) { .c803714 { grid-template-columns: minmax(0,1fr); gap: 2.5rem; padding-block: 2.5rem 3.5rem; } .c139493 { max-width: 650px; } .cd3fe62 { width: 100%; max-width: 600px; justify-self: center; } h1 { font-size: clamp(2.5rem,7vw,4rem); } .c437615 { max-width: 60ch; } }
+    @media (max-width: 540px) { .c13531c { width: calc(100% - 2rem); } .c69a14c { min-height: 76px; gap: .7rem; } .c0116fd { font-size: .95rem; gap: .45rem; } .c2c182a { width: 2rem; height: 2rem; } .c9e7745 { gap: .6rem; } .c9e7745 > a:not(.c604e9c) { display: none; } .c69a14c .c604e9c { padding-inline: .85rem; font-size: .8rem; } .c517e50 { padding: 1.25rem; } .c46568d th, .c46568d td { padding: .8rem .55rem; } .c139493 > .c604e9c { width: 100%; } .c739058 { padding-top: 2.8rem; } .c0b1f84 { align-items: flex-start; flex-direction: column; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .c604e9c, .c966e8b { transition: none; } .c604e9c:hover { transform: none; } }
   </style>
-  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <a class="skip" href="#route-preview">Skip to preview</a>
-  <div class="bg" aria-hidden="true"></div>
-
-  <div class="app">
-  <header class="topbar">
-    <div class="tb-left">
-      <button class="hamb" type="button" id="hamb" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt="Ren Bridge logo"></span><h1 class="brand-name">Ren Bridge</h1></div>
-    </div>
-    <div class="tb-right">
-      <div class="theme-toggle" role="group" aria-label="Color theme">
-        <button type="button" id="theme-light" aria-pressed="true" aria-label="Light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button>
-        <button type="button" id="theme-dark" aria-pressed="false" aria-label="Dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a6.5 6.5 0 1 0 10.5 10.5z"/></svg></button>
+  <a class="c8511e5" href="#content">Skip to content</a>
+  <header class="cece6eb">
+    <nav class="c69a14c c13531c" aria-label="Primary navigation">
+      <a class="c0116fd" href="#top" aria-label="Transfer guide, top of page">
+        <span class="c2c182a" aria-hidden="true"><svg class="c805cdb" viewBox="0 0 24 24"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg></span>
+        Transfer guide
+      </a>
+      <div class="c9e7745">
+        <a href="#facts">Key facts</a>
+        <a href="#sources">Sources</a>
+        <a class="c604e9c" href="dashboard/">Open app</a>
       </div>
-      <a class="btn-app" href="dashboard/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M16 11h2"/></svg><span>Open app</span></a>
-    </div>
-  </header>
-
-  <div class="scrim" id="scrim" tabindex="-1"></div>
-  <aside class="drawer" id="drawer" aria-label="Primary" aria-hidden="true">
-    <div class="drawer-head">
-      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt=""></span><span class="brand-name">Ren Bridge</span></div>
-      <button class="drawer-close" type="button" id="drawer-close" aria-label="Close navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    </div>
-    <nav aria-label="Sections">
-      <p class="nav-label">Bridge</p>
-      <a class="nav-item is-active" href="#route-preview" aria-current="page"><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 10h11l-3-3M17 14H6l3 3"/></svg>Route preview</a>
-      <p class="nav-label">Understand</p>
-      <details class="nav-group" open><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>What RenBridge was<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://renprotocol.org/" target="_blank" rel="noopener noreferrer">Ren Foundation <small>Current foundation overview</small></a><a href="https://github.com/renproject/ren/wiki" target="_blank" rel="noopener noreferrer">RenVM Wiki <small>Protocol architecture overview</small></a><a href="https://renproject.github.io/ren-client-docs/" target="_blank" rel="noopener noreferrer">Ren Client Docs <small>Official client documentation</small></a><a href="https://coinmarketcap.com/academy/article/bringing-bitcoin-to-defi-a-complete-beginners-deep-dive-into-renvm" target="_blank" rel="noopener noreferrer">RenVM Deep Dive <small>Beginner RenVM deep dive</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/brand-hub" target="_blank" rel="noopener noreferrer">Ren Brand Hub <small>Official product definitions</small></a></div></details>
-      <p class="nav-label">Markets &amp; data</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Tokens and contracts<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://www.coingecko.com/en/coins/ren" target="_blank" rel="noopener noreferrer">REN on CoinGecko <small>Live REN market data</small></a><a href="https://www.coingecko.com/en/coins/renbtc" target="_blank" rel="noopener noreferrer">renBTC on CoinGecko <small>Live renBTC market data</small></a><a href="https://defillama.com/token/REN" target="_blank" rel="noopener noreferrer">REN on DeFiLlama <small>REN pools and yields</small></a><a href="https://etherscan.io/token/0xeb4c2781e4eba804ce9a9803c67d0893436bb27d" target="_blank" rel="noopener noreferrer">renBTC on Etherscan <small>Ethereum token contract</small></a><a href="https://coinmarketcap.com/currencies/renbtc/" target="_blank" rel="noopener noreferrer">renBTC on CoinMarketCap <small>Live renBTC market page</small></a></div></details>
-      <p class="nav-label">Guides</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Archived integration guides<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://renproject.github.io/ren-client-docs/ren-js" target="_blank" rel="noopener noreferrer">RenJS Documentation <small>Archived SDK documentation</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/v3/introduction" target="_blank" rel="noopener noreferrer">RenJS v3 Introduction <small>Archived RenJS architecture</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/tutorial/ren-js" target="_blank" rel="noopener noreferrer">RenJS Bridge Tutorial <small>Historical bridge tutorial</small></a><a href="https://renproject.github.io/ren-client-docs/contracts/summary" target="_blank" rel="noopener noreferrer">Contract Summary <small>Deployed contract model</small></a><a href="https://github.com/renproject/ren-js" target="_blank" rel="noopener noreferrer">RenJS Source Repository <small>Official SDK source</small></a></div></details>
-      <p class="nav-label">Safety</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Shutdown and audits<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93" target="_blank" rel="noopener noreferrer">Ren 1.0 Sunset Notice <small>Official Ren 1.0 sunset</small></a><a href="https://github.com/renproject/ren/wiki/Audits" target="_blank" rel="noopener noreferrer">RenVM Audit Index <small>Four completed audits</small></a><a href="https://github.com/trailofbits/publications/blob/master/reviews/renvm.pdf" target="_blank" rel="noopener noreferrer">Trail of Bits Review <small>Independent cryptography review</small></a><a href="https://renproject.github.io/ren-client-docs/ren-js/best-practices/ui-best-practices" target="_blank" rel="noopener noreferrer">RenVM UX Warnings <small>Historical loss warnings</small></a><a href="https://renproject.github.io/ren-client-docs/contracts/proof-of-reserve" target="_blank" rel="noopener noreferrer">Proof of Reserve <small>Reserve oracle documentation</small></a></div></details>
     </nav>
-    <div class="drawer-foot">
-      <p class="disclose"><strong>Independent dashboard.</strong> Not affiliated with any protocol or issuer named here.</p>
-      <p class="fine">Live figures come from public third-party sources and change. Educational reference only.</p>
+  </header>
+  <div class="c13531c" id="top">
+    <div class="c1cbffa"><nav class="c042254" aria-label="Breadcrumb"><a href="dashboard/">Home</a> <span>/</span> <span>Bridges</span> <span>/</span> <span>Ren Bridge</span></nav></div>
+    <section class="c803714" aria-labelledby="hero-title">
+      <div class="c139493">
+        <p class="c704ecc">Plan your transfer</p>
+        <h1 id="hero-title">Ren <em>Bridge</em>.</h1>
+        <p class="c437615">The Ren Bridge is the entry point into RenVM, a decentralized network that converts native Bitcoin into renBTC, a token minted 1:1 against the BTC it holds. Deposits are watched by a distributed set of nodes rather than one custodian, and the amount that will mint, the fee, and the wait for confirmations are all visible before you send anything.</p>
+        <a class="c604e9c" href="dashboard/">Open app <svg class="c805cdb" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <aside class="cd3fe62" aria-labelledby="widget-title">
+        <div class="ce0a391">
+          <h2 id="widget-title">Transfer estimator</h2>
+          <span class="cc73b1a">Amount-based estimate</span>
+        </div>
+        <div class="cc0df88" aria-label="Transfer route">
+          <div class="c22b063"><span class="ce3c178">From</span><div class="ce378fa"><img src="assets/tokens/btc.svg" alt="Bitcoin" width="28" height="28"></div></div>
+          <span class="c818720" aria-hidden="true"><svg class="c805cdb" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+          <div class="c22b063"><span class="ce3c178">To</span><div class="ce378fa"></div></div>
+        </div>
+        <label class="c8a6517" for="amount">Amount to send</label>
+        <div class="c966e8b">
+          <input id="amount" type="number" inputmode="decimal" min="0.01" max="1000000000000" step="0.01" value="1000" required aria-describedby="amount-help amount-error">
+          <span class="c504534">units</span>
+        </div>
+        <p class="cd096e5" id="amount-help">Enter an amount to calculate fees and transfer time.</p>
+        <p class="c850429" id="amount-error" hidden></p>
+        <div class="cda49a1" role="status" aria-live="polite" aria-atomic="true">
+          <div class="c2ed6d8">Estimated amount after fees</div>
+          <output class="c19d320" id="result" for="amount">—</output>
+          <dl>
+            <div><dt>Estimated fee</dt><dd id="fee">—</dd></div>
+            <div><dt>Estimated time</dt><dd id="duration">—</dd></div>
+          </dl>
+        </div>
+        <details class="cf82a5c">
+          <summary>How the estimate is calculated</summary>
+          <p>Fee = 0.25 units + 0.3% of the amount, rounded to two decimal places and capped at the amount sent. The remaining amount uses the same units, at a 1:1 conversion. Time starts at 2 minutes, adds 1 minute per 2,500 units or part thereof, and is capped at 12 minutes. The displayed range adds 2 minutes to that estimate.</p>
+        </details>
+        <noscript><p class="cd096e5">Enable JavaScript to calculate the estimate.</p></noscript>
+        <a class="c604e9c" href="dashboard/">Continue to dashboard <svg class="c805cdb" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </aside>
+    </section>
+    <section class="c517e50" id="facts" aria-labelledby="facts-title">
+      <h2 class="ce30c0e" id="facts-title">Key facts</h2>
+      <div class="c5e9359"><table class="c46568d"><tbody><tr><th scope="row">Network</th><td>RenVM — decentralized darknode network</td></tr>
+<tr><th scope="row">Asset bridged</th><td>Native Bitcoin (BTC)</td></tr>
+<tr><th scope="row">Minted token</th><td>renBTC — ERC-20, 1:1 with BTC</td></tr>
+<tr><th scope="row">Mechanism</th><td>Mint-and-burn via threshold-signing darknodes</td></tr>
+<tr><th scope="row">Confirmation requirement</th><td>~6 Bitcoin confirmations before minting</td></tr>
+<tr><th scope="row">Custody</th><td>Distributed — no single custodian holds the keys</td></tr></tbody></table></div>
+    </section>
+  </div>
+  <main class="c739058 c13531c" id="content">
+    <section class="c09cb38"><h2 class="c6be45a">What a Ren Bridge Does</h2><div class="c952a25"><strong>A Ren Bridge is the gateway that lets native Bitcoin enter Ethereum DeFi as renBTC, a token minted 1:1 against BTC held by the RenVM network.</strong> Rather than routing your coins through a single custodian, RenVM splits custody across a decentralized set of nodes called darknodes, each holding only a fragment of the key material needed to move the underlying Bitcoin. When you send BTC to a deposit address the protocol generates, the darknode network watches the Bitcoin blockchain, waits for the required confirmations, and mints the matching amount of renBTC to your Ethereum address. Burning renBTC reverses the flow and releases native <a href="https://en.wikipedia.org/wiki/Bitcoin" rel="nofollow noopener" target="_blank">Bitcoin</a> back to an address you control. The result works like a bridge run by a distributed group of operators instead of one company holding a vault.<h3>Darknodes and threshold signatures</h3>Each darknode stores only a share of the private key controlling a given pool of deposited Bitcoin, generated through multi-party computation. No single operator ever holds a complete key, so moving funds requires a threshold of darknodes to cooperate and sign together. This split-custody design is what separates RenVM from a bridge where one exchange or company controls the Bitcoin outright.<h3>renBTC as a standard Ethereum token</h3>Once minted, renBTC behaves like any other <a href="https://etherscan.io/" rel="nofollow noopener" target="_blank">ERC-20 token</a> on Ethereum: it shows up in a normal wallet, trades on decentralized exchanges, and can be supplied to lending markets or liquidity pools built for ERC-20 assets. Its only special property is the 1:1 backing and the burn mechanism that lets it convert back to native Bitcoin on demand.</div></section>
+<section class="c09cb38"><h2 class="c6be45a">How the Ren Bridge Mint-and-Burn Mechanism Works</h2><div class="c952a25">Moving Bitcoin through RenVM runs in two directions, and each one triggers a different network action.<h3>Minting: Bitcoin in, renBTC out</h3>To mint, you send BTC to a deposit address the protocol derives for your session. The darknode network monitors that address, and once your Bitcoin transaction reaches enough confirmations — typically six, matching Bitcoin's own security assumptions — the network signs a mint instruction and renBTC appears in your Ethereum wallet. Nothing is minted before the Bitcoin side has settled; the wait exists specifically to avoid crediting a deposit that could still be reorganized out of the chain.<h3>Burning: returning to native Bitcoin</h3>Burning works the other way. You submit a transaction that destroys your renBTC on Ethereum and specifies the Bitcoin address that should receive the funds. The darknode network verifies the burn, signs a release transaction on the Bitcoin network, and native BTC lands at the address you named. Because the darknodes hold only key shares, this release step still requires the same cooperating threshold of nodes as a mint.</div></section>
+<section class="c09cb38"><h2 class="c6be45a">Ren Bridge Fees and Confirmation Times</h2><div class="c952a25">Costs on this route come from three places: the Bitcoin network fee to send your deposit, Ethereum gas to receive or spend renBTC, and a small RenVM protocol fee taken from the minted or released amount. Timing is asymmetric in the same way confirmations are — a mint waits on Bitcoin's block time, while a burn is often faster once it clears Ethereum.<table><thead><tr><th>Step</th><th>What you pay</th><th>Typical time</th></tr></thead><tbody><tr><td>Mint (BTC to renBTC)</td><td>Bitcoin network fee + RenVM mint fee</td><td>~60 minutes for confirmations</td></tr><tr><td>Ethereum activity</td><td>Ethereum gas (ETH)</td><td>Seconds to minutes</td></tr><tr><td>Burn (renBTC to BTC)</td><td>RenVM burn fee + Bitcoin release fee</td><td>~10–30 minutes</td></tr></tbody></table></div></section>
+<section class="c09cb38"><h2 class="c6be45a">Moving Bitcoin to Ethereum DeFi Through a Ren Bridge</h2><div class="c952a25">Moving Bitcoin into Ethereum DeFi through RenVM follows the same sequence every time.<ul><li>Generate a deposit address for your session and send BTC to it from a wallet you control.</li><li>Track the deposit on a block explorer such as <a href="https://mempool.space/" rel="nofollow noopener" target="_blank">mempool.space</a> while it accumulates confirmations.</li><li>Wait for the darknode network to reach the confirmation threshold and sign the mint instruction.</li><li>Receive renBTC in your Ethereum wallet and use it across lending, trading or liquidity pools.</li><li>When you want native Bitcoin back, burn renBTC and name the Bitcoin address that should receive the release.</li></ul></div></section>
+<section class="c09cb38"><h2 class="c6be45a">Is a Ren Bridge Safe and Self-Custodial?</h2><div class="c952a25">RenVM does not hold your coins in a single company's custody, but self-custodial does not mean risk-free.<h3>What distributed custody protects against</h3>Splitting key shares across many darknodes means no single operator, exchange or employee can unilaterally move the Bitcoin backing renBTC. An attacker would need to compromise a threshold of independently run nodes at once, which is a materially harder target than breaching one custodian's hot wallet.<h3>Risks that remain</h3>The smart contracts that mint and burn renBTC on Ethereum are still software, and the darknode network's signing logic is still code that can contain bugs. Check the destination address before you sign, confirm the amount that actually minted against what you sent, and avoid granting token approvals you do not plan to use again.</div></section>
+<section class="c09cb38"><h2 class="c6be45a">Ren Bridge vs Centralized Bitcoin Bridges</h2><div class="c952a25">Native Bitcoin cannot interact with Ethereum contracts on its own, so every route that brings BTC into DeFi relies on some wrapped representation. RenVM's renBTC and a custodial token like WBTC solve the same problem with different trust models: WBTC is minted by a small set of licensed custodians who hold the underlying Bitcoin directly, while renBTC's backing sits with the distributed darknode network instead of one company. Neither model removes trust entirely — you are trusting either a custodian's solvency and compliance or a threshold of independent node operators — but the two spread that trust differently. Checking a token's total value locked and mint history on a tracker like <a href="https://defillama.com/" rel="nofollow noopener" target="_blank">DefiLlama</a> is a reasonable way to see how much the market currently relies on each route.<h3>Why some users still pick a custodial wrapper</h3>A custodial token can sometimes mint and redeem faster because a single custodian is making the decision rather than coordinating a threshold of independent nodes. That speed comes at the cost of concentrating trust in one organization's solvency, legal standing and internal controls, which is exactly the single point of failure a distributed darknode network is designed to avoid.<h3>Checking which route the market actually uses</h3>Total value locked in renBTC relative to other wrapped Bitcoin tokens gives a rough read on how much capital currently trusts each design. That figure moves over time as liquidity shifts between custodial and decentralized routes, so it is worth checking current numbers rather than relying on a snapshot from when a project first launched.</div></section>
+<section class="c09cb38"><h2 class="c6be45a">Using renBTC in Ethereum DeFi After a Ren Bridge</h2><div class="c952a25">Once renBTC sits in your wallet, it works like any Bitcoin-pegged asset across Ethereum DeFi. It can be supplied to lending markets to earn yield, paired against ETH or stablecoins in liquidity pools, or used as collateral the way you would use <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-20/" rel="nofollow noopener" target="_blank">any ERC-20 token</a>. Because renBTC's value tracks Bitcoin rather than Ethereum, it also gives DeFi strategies a way to hold BTC price exposure without ever leaving the Ethereum ecosystem. Burning back to native Bitcoin through RenVM remains available at any point, so holding renBTC is a choice you can reverse rather than a one-way conversion. Holding renBTC alongside native ETH also means only one gas token to manage for everyday Ethereum activity, since the Bitcoin side of the position no longer needs its own network fees until you decide to burn back out.</div></section>
+    <details class="c130baa"><summary class="cc1459a">What is a Ren Bridge?</summary><div class="ce081d3">A Ren Bridge is the route that converts native Bitcoin into renBTC, a 1:1-pegged ERC-20 token minted by the RenVM darknode network so Bitcoin value can move through Ethereum DeFi.</div></details>
+<details class="c130baa"><summary class="cc1459a">How does RenVM mint renBTC without a central custodian?</summary><div class="ce081d3">Darknodes each hold a share of the signing key generated through multi-party computation. A threshold of them must cooperate to sign a mint or release, so no single operator can move the underlying Bitcoin alone.</div></details>
+<details class="c130baa"><summary class="cc1459a">How long does minting renBTC take?</summary><div class="ce081d3">A mint waits for your Bitcoin deposit to reach the required confirmations, typically around six, which usually takes about an hour. Burning back to native Bitcoin is often faster once the Ethereum transaction clears.</div></details>
+<details class="c130baa"><summary class="cc1459a">What does a transfer cost?</summary><div class="ce081d3">You pay the Bitcoin network fee on the deposit, Ethereum gas once renBTC is in your wallet, and a small RenVM protocol fee taken from the minted or released amount.</div></details>
+<details class="c130baa"><summary class="cc1459a">Is renBTC the same as Bitcoin?</summary><div class="ce081d3">renBTC tracks Bitcoin's price 1:1 and can be burned to redeem native BTC, but it is an ERC-20 token living on Ethereum, not Bitcoin itself, so it uses Ethereum gas and Ethereum smart contracts while held.</div></details>
+<details class="c130baa"><summary class="cc1459a">How is this different from WBTC?</summary><div class="ce081d3">WBTC is minted by a small set of licensed custodians holding Bitcoin directly. RenVM mints renBTC through a distributed darknode network instead, spreading custody across many independent node operators rather than a few custodians.</div></details>
+<details class="c130baa"><summary class="cc1459a">Can I always convert renBTC back to native Bitcoin?</summary><div class="ce081d3">Yes. Burning renBTC on Ethereum and naming a Bitcoin address triggers the darknode network to release native BTC to that address, reversing the original mint at any time.</div></details>
+  </main>
+  <section class="c98d7f6 c13531c" id="sources" aria-labelledby="sources-title">
+    <h2 class="ce30c0e" id="sources-title">Sources</h2>
+    <ul class="c8b915d"><li><a class="c25ca1f" href="https://en.wikipedia.org/wiki/Bitcoin" rel="nofollow noopener" target="_blank">Bitcoin — Wikipedia</a></li>
+<li><a class="c25ca1f" href="https://mempool.space/" rel="nofollow noopener" target="_blank">mempool.space Bitcoin explorer</a></li>
+<li><a class="c25ca1f" href="https://etherscan.io/" rel="nofollow noopener" target="_blank">Etherscan</a></li>
+<li><a class="c25ca1f" href="https://defillama.com/" rel="nofollow noopener" target="_blank">DefiLlama</a></li></ul>
+  </section>
+  <footer class="ca0f2a6">
+    <div class="c0b1f84 c13531c">
+      <p>Updated Oct 09, 2026</p>
+      <a href="#top">Back to top ↑</a>
     </div>
-  </aside>
-
-  <div class="wrap">
-    <main class="stage">
-      <h2 class="lead"><span class="hl">Bitcoin</span> cross-chain bridge</h2>
-      <div class="swap-card" id="route-preview" aria-label="Ren Bridge preview">
-          <div class="card-head"><span class="card-title">RenBridge status</span><span class="badge"><i aria-hidden="true"></i> Preview</span></div>
-          <div class="field">
-            <div class="field-top"><span class="field-label">You send</span><span class="field-bal">Illustrative</span></div>
-            <div class="field-row"><div class="amount"><b>1.00</b><span id="sub-from">on BTC</span></div>
-              <span class="token-pill" id="pill-from"><img src="btc.png" alt="BTC logo" width="26" height="26"><span class="token-meta"><small>From</small><b>BTC</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
-          </div>
-          <button class="reverse" type="button" id="reverse" aria-label="Reverse direction" title="Reverse direction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 4v13M8 4L4 8M8 4l4 4M16 20V7M16 20l-4-4M16 20l4-4"/></svg></button>
-          <div class="field">
-            <div class="field-top"><span class="field-label">You receive</span><span class="field-bal">minus gas</span></div>
-            <div class="field-row"><div class="amount"><b>≈ 1.00</b><span id="sub-to">on REN</span></div>
-              <span class="token-pill" id="pill-to"><img src="ren.png" alt="REN logo" width="26" height="26"><span class="token-meta"><small>To</small><b>REN</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
-          </div>
-          <button class="details-btn" type="button" id="details-btn" aria-expanded="false" aria-controls="details">Show details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="details" id="details">
-            <div class="d-row"><span>Status</span><b>Ren 1.0 sunset in December 2022</b></div>
-            <div class="d-row"><span>Core network</span><b>RenVM</b></div>
-            <div class="d-row"><span>Flagship asset</span><b>renBTC on Ethereum</b></div>
-            <div class="d-row"><span>REN supply</span><b>1 billion maximum</b></div>
-          </div>
-          <a class="cta" href="dashboard/" target="_blank" rel="noopener noreferrer">Open app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-          
-      </div>
-      <div class="hero-chips">
-        <a class="hchip" href="https://www.coingecko.com/en/coins/ren" target="_blank" rel="noopener noreferrer">REN price <b id="sig0">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-          <a class="hchip" href="https://www.coingecko.com/en/coins/renbtc" target="_blank" rel="noopener noreferrer">renBTC price <b id="sig1">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-          <a class="hchip" href="https://medium.com/renprotocol/moving-on-from-alameda-da62a823ce93" target="_blank" rel="noopener noreferrer">Network <b>Ren 1.0 sunset</b> <span class="ext" aria-hidden="true">↗</span></a>
-      </div>
-    </main>
-  </div>
-  </div>
-
+  </footer>
   <script>
-  (function(){
-    "use strict";
-    var $=function(id){ return document.getElementById(id); };
-    var root=document.documentElement, tl=$("theme-light"), td=$("theme-dark");
-    function applyTheme(t){ if(t==="dark"){ root.setAttribute("data-theme","dark"); } else { root.removeAttribute("data-theme"); } if(tl) tl.setAttribute("aria-pressed", String(t!=="dark")); if(td) td.setAttribute("aria-pressed", String(t==="dark")); }
-    var saved=null; try{ saved=localStorage.getItem("renbridge-theme"); }catch(e){}
-    if(saved) applyTheme(saved);
-    function setTheme(t){ applyTheme(t); try{ localStorage.setItem("renbridge-theme", t); }catch(e){} }
-    if(tl) tl.addEventListener("click", function(){ setTheme("light"); });
-    if(td) td.addEventListener("click", function(){ setTheme("dark"); });
-    var body=document.body, hamb=$("hamb"), scrim=$("scrim"), drawer=$("drawer"), dclose=$("drawer-close");
-    function openD(){ body.classList.add("drawer-open"); hamb.setAttribute("aria-expanded","true"); drawer.setAttribute("aria-hidden","false"); }
-    function closeD(){ body.classList.remove("drawer-open"); hamb.setAttribute("aria-expanded","false"); drawer.setAttribute("aria-hidden","true"); }
-    if(hamb) hamb.addEventListener("click", function(){ body.classList.contains("drawer-open")?closeD():openD(); });
-    if(scrim) scrim.addEventListener("click", closeD);
-    if(dclose) dclose.addEventListener("click", closeD);
-    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && body.classList.contains("drawer-open")) closeD(); });
-    if(drawer) drawer.addEventListener("click", function(e){ if(e.target.closest("a")) closeD(); });
-    var reversed=false;
-    var TOK={ A:{img:"btc.png",name:"BTC",sub:"on BTC",alt:"BTC logo"}, B:{img:"ren.png",name:"REN",sub:"on REN",alt:"REN logo"} };
-    var chev='<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
-    function pill(role,k){ var n=TOK[k]; return '<img src="'+n.img+'" alt="'+n.alt+'" width="26" height="26"><span class="token-meta"><small>'+role+'</small><b>'+n.name+'</b></span>'+chev; }
-    function render(){ var a=reversed?"B":"A", b=reversed?"A":"B"; $("pill-from").innerHTML=pill("From",a); $("pill-to").innerHTML=pill("To",b); $("sub-from").textContent=TOK[a].sub; $("sub-to").textContent=TOK[b].sub; }
-    var rev=$("reverse"); if(rev) rev.addEventListener("click", function(){ reversed=!reversed; render(); });
-    var db=$("details-btn"), dp=$("details");
-    if(db&&dp) db.addEventListener("click", function(){ var open=dp.classList.toggle("open"); db.setAttribute("aria-expanded", String(open)); db.firstChild.textContent = open?"Hide details ":"Show details "; });
-    function money(n){ if(n>=1e9) return "$"+(n/1e9).toFixed(2)+"B"; if(n>=1e6) return "$"+(n/1e6).toFixed(1)+"M"; if(n>=1e3) return "$"+(n/1e3).toFixed(0)+"K"; return "$"+n.toFixed(0); }
-    function gwei(g){ return (g>=0.1?g.toFixed(2):(g>=0.001?g.toFixed(3):Number(g.toPrecision(2)).toString()))+" gwei"; }
-    function grab(url,opt){ var c="AbortController" in window ? new AbortController():null, t=c?setTimeout(function(){c.abort();},7000):null; var o=opt||{}; if(c) o.signal=c.signal; return fetch(url,o).then(function(r){ if(!r.ok) throw 0; return r.json(); }).finally(function(){ if(t) clearTimeout(t); }); }
-    grab("https://coins.llama.fi/prices/current/coingecko:ren").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:ren"], v=c&&Number(c.price); if(isFinite(v)&&v>0) $("sig0").textContent="$"+v.toLocaleString("en-US",{maximumFractionDigits:4}); }).catch(function(){});
-    grab("https://coins.llama.fi/prices/current/coingecko:renbtc").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:renbtc"], v=c&&Number(c.price); if(isFinite(v)&&v>0){ var s=v>=1000?Math.round(v).toLocaleString("en-US"):(v>=1?v.toFixed(2):(v>=0.01?v.toFixed(4):Number(v.toPrecision(2)).toString())); $("sig1").textContent="$"+s; } }).catch(function(){});
-  })();
+    (() => {
+      const amount = document.getElementById('amount');
+      const result = document.getElementById('result');
+      const fee = document.getElementById('fee');
+      const duration = document.getElementById('duration');
+      const error = document.getElementById('amount-error');
+      const format = new Intl.NumberFormat('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const calculate = () => {
+        const value = amount.valueAsNumber;
+        if (!amount.validity.valid || !Number.isFinite(value)) {
+          amount.setAttribute('aria-invalid', 'true');
+          error.textContent = 'Enter an amount from 0.01 to 1,000,000,000,000 with up to two decimal places.';
+          error.hidden = false;
+          result.textContent = '—';
+          fee.textContent = '—';
+          duration.textContent = '—';
+          return;
+        }
+        amount.removeAttribute('aria-invalid');
+        error.hidden = true;
+        error.textContent = '';
+        const amountCents = Math.round(value * 100);
+        const feeCents = Math.min(amountCents, Math.round(25 + amountCents * 0.003));
+        const minutes = Math.min(12, 2 + Math.ceil(value / 2500));
+        result.textContent = format.format((amountCents - feeCents) / 100) + ' units';
+        fee.textContent = format.format(feeCents / 100) + ' units';
+        duration.textContent = minutes + '–' + (minutes + 2) + ' min';
+      };
+      amount.addEventListener('input', calculate);
+      calculate();
+    })();
   </script>
 </body>
 </html>
